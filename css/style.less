@@ -1,0 +1,667 @@
+//@import url("tinyScreen.css") screen and (max-device-width: 400px);
+//@import url("smallScreen.css") screen and (min-width: 400px) and (max-device-width: 600px);
+body{
+  font: normal 100% Helvetica, Arial, sans-serif;
+  font-size:20px;
+  color:#585859;
+  overflow-y: scroll;
+
+}
+ul,ol,li{
+  margin-bottom: 0;
+  list-style: none;
+}
+h1,h2,h3,h4{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+p{
+  margin:0 0 ;
+}
+a{
+  text-decoration:none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+button:focus{
+  outline:0;
+}
+.oh(){
+  overflow: hidden;
+}
+.db(){
+  display: block;
+}
+.d_ib(){
+  display: inline-block;
+}
+.fl(){
+  float:left;
+}
+.fr(){
+  float: right;
+}
+.fontsize(@size){
+  font-size:@size;
+}
+.border-radius(@radius){
+  border-radius:@radius;
+}
+.flex-center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-nowrap(){
+  white-space: nowrap;
+  overflow: hidden;
+}
+.text-sl{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@color-main:#118eeb;
+@color-main-hover:#3176b1;
+@color-fff:#fff;
+@color-border:#c5c3c3;
+@color-red:#d70c30;
+@color-red-hover:#c00203;
+@color-little-word:#9d9d9e;
+@color-little-bg:#f5f5f5;
+@color-orange:#dd5700;
+@color-middle-word:#7e7e7e;
+@color-footer-bg:#b3e2f7;
+@color-search-bg:#86b942;
+@color-ggl:#044484;
+@color-lines:#dcdcdc;
+
+//引导页
+.yd-main{
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  position: relative;
+  overflow-y: hidden;
+  img{
+    width:100%;
+    height:100%;
+  }
+  .login-btn{
+    .db();
+    position: fixed;
+    top:45%;
+    left:50%;
+    margin-left:-100px;
+    width:200px;
+    height:70px;
+    line-height:70px ;
+    z-index: 1;
+    button{
+      .db();
+      background: @color-main;
+      color:@color-fff;
+      width:100%;
+      height:100%;
+      border-radius:10px;
+      border:none;
+      &:hover{
+        background:@color-main-hover ;
+        border:none;
+      }
+    }
+  }
+}
+/*登录页*/
+.mainConBox{
+  width:100%;
+  height:auto;
+  margin:0 auto;
+}
+.nav-wrap{
+  width:100%;
+  border-bottom:1px solid @color-border;
+  box-shadow: 0px 1px 5px rgba(0,0,0,.2);
+  .ebooks-logo{
+    padding:0px 10px;
+    .d_ib();
+    width:auto;
+    height:100%;
+    img{
+      width:auto;
+      height:100%;
+    }
+  }
+  .login-txt{
+    height:100%;
+    line-height: 100%;
+  }
+}
+
+.formBox1 {
+  width: 50%;
+  margin: 25px auto;
+  .fontsize(1em);
+  .form-group {
+    height: auto;
+    padding: 5px 0;
+    label {
+      //padding-top: 10px;
+      vertical-align: middle;
+      line-height: 1.42857143;
+      padding-top:10px;
+    }
+    .form-control {
+      height: auto;
+      padding: 10px 5px;
+      .border-radius(1px);
+      .fontsize(14px);
+      &:hover{
+        border:1px solid #c9c9c9;
+      }
+    }
+
+    　::-webkit-input-placeholder { /* WebKit browsers */
+          font-size:12px;
+      }
+    　 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            font-size:12px;
+      }
+    　::-moz-placeholder { /* Mozilla Firefox 19+ */
+          font-size:12px;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+          font-size:12px;
+      }
+
+    .tx-icon {
+      width: 6px;
+      height: 6px;
+      background: url("../images/tx-icon.png") 0 0 no-repeat;
+      vertical-align: middle;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+    .right-txt{
+      padding-top:8px;
+      span{
+        padding:0 20px 0 10px;
+      }
+    }
+  }
+  .btn{
+    width:100%;
+    .fontsize(1.1em);
+    background: @color-red;
+    color:@color-fff;
+    &:hover{
+      background: @color-red-hover;
+      color:@color-fff;
+    }
+  }
+  .from-no-bottom{
+    margin-bottom:5px;
+  }
+  .form-group-txt{
+    .fontsize(0.874em);
+    .oh();
+    span{
+      line-height: 22px;
+    }
+    a{
+      padding-top:8px;
+      .d_ib();
+    }
+  }
+}
+.formBox2{
+  margin:10% auto;
+  .btn{
+    margin-top:20px;
+  }
+}
+.no-padding-r{
+  padding-right:0px;
+}
+/*首页 导航*/
+.mianNav-wrap{
+  background: @color-main;
+  width:100%;
+  height:auto;
+}
+.main-navBox{
+  color:@color-fff;
+  position: relative;
+  a{
+    color:@color-fff;
+  }
+  .navbar{
+    margin-bottom:0px;
+  }
+  .navbar-right{
+    .fontsize(16px);
+    a:hover{
+      color:@color-main;
+    }
+  }
+  .back-left{
+    width:20px;
+    height:25px;
+    .d_ib() ;
+    background: url("../images/back-left-icon.png") 0 0 no-repeat;
+  }
+  .menu-right{
+    width:25px;
+    height:25px;
+    .d_ib() ;
+    background: url("../images/menu-right-icon.png") 0 0 no-repeat;
+  }
+}
+
+/*首页搜索*/
+.searchBoxwrap{
+  margin:20px auto;
+  height:auto;
+  background: #eff0f1;
+  .border-radius(8px);
+  .oh();
+  padding:10px ;
+}
+.searchBox{
+  .navbar-form{
+    width:100%;
+    .form-group{
+      width:80%;
+    }
+    .search-input{
+      width:100%;
+      height:45px;
+    }
+  }
+  .btn-green{
+    background: @color-search-bg;
+    color:@color-fff;
+    .fontsize(18px);
+    margin:0 5px;
+  }
+  .search-icon{
+    width:30px;
+    height:25px;
+    .d_ib();
+    background: url("../images/search-icon.png") 0 0 no-repeat;
+    margin-right:5px;
+    vertical-align: middle;
+  }
+  .hot-search{
+    padding:0 15px;
+    .oh();
+    span{
+      .fl();
+      padding-top:4px;
+    }
+    .checkbox{
+      .fl();
+      margin-top:0;
+      margin-bottom:0;
+      .border-radius(50%);
+      label{
+        padding-left:0;
+      }
+    }
+  }
+}
+.searchBox2{
+  .oh();
+  width:30%;
+  .fr();
+  margin:10px 0;
+  .navbar-form{
+    padding:5px 15px 0px;
+    margin:0 auto;
+    position: relative;
+    width:100%;
+    .form-group{
+      width:100%;
+    }
+    .search-input{
+      height:30px;
+      width:100%;
+      .border-radius(15px);
+    }
+    .btn{
+      background: none;
+      position: absolute;
+      top:0px;
+      right:5px;
+    }
+    .search-icon{
+      width:30px;
+      height:25px;
+      .d_ib();
+      background: url("../images/search-icon-gray.png") 0 0 no-repeat;
+      margin-right:5px;
+      vertical-align: middle;
+    }
+  }
+}
+/*通知*/
+.import-news{
+  .panel-heading{
+    background:@color-orange ;
+    border:0;
+   color:@color-fff;
+  }
+  .list-group{
+    a{
+      .db();
+      color:@color-middle-word;
+      span{
+        .fr();
+        background: @color-orange;
+        padding:3px 20px;
+        color:@color-fff;
+        .border-radius(5px);
+      }
+      &:hover{
+        color:@color-main;
+        text-decoration: none;
+      }
+    }
+  }
+}
+/*首页 主内容*/
+.containerBox{
+  .panel-heading{
+    font-weight: bold;
+  }
+  .navToggle-con{
+    margin:5px ;
+  }
+  .list-group{
+    .oh();
+    li{
+      border:0;
+      height:32px;
+      line-height: 32px;
+      padding:0 0;
+      span{
+        .fr();
+        .d_ib();
+      }
+      a{
+        .db();
+        padding:0 5px;
+      }
+      &:nth-child(odd){
+        background: @color-little-bg;
+      }
+    }
+  }
+  .navToggle-title-noxs{
+    background: @color-little-bg;
+    border:1px solid @color-little-word;
+    .oh();
+    padding:10px 5px;
+    .list-l{
+      .fl();
+      width:100%/3 - 2%;
+      margin:0 1%;
+      text-align: center;
+      background: @color-fff;
+      padding:5px ;
+      border:1px solid @color-little-word;
+      .border-radius(5px);
+      color:#5c5c5c;
+      .fontsize(1.0em);
+      &:hover,&.cur{
+        color:@color-fff;
+        background: @color-main;
+        border:1px solid @color-main-hover;
+      }
+    }
+  }
+  .panel-body{
+    p{
+      padding:5px 0;
+      line-height: 20px;
+    }
+  }
+}
+/*书籍列表*/
+.picList-box{
+  margin:40px auto;
+  .oh();
+  .thumbnail{
+    background: @color-little-bg;
+    position: relative;
+    .border-radius(0px);
+    img{
+      border:1px solid #ddd;
+    }
+    .caption{
+      padding:9px 0 0 0;
+      .oh();
+      p{
+        line-height: 22px;
+      }
+      .little-word{
+        .fontsize(0.75em);
+      }
+    }
+    .bottom-con{
+      padding-top:30px;
+      .oh();
+      .money{
+        font-weight: bold;
+        .fr();
+      }
+      .classfiy-btn{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        color:@color-fff;
+        .fontsize(0.75em);
+        padding:1px 5px;
+      }
+      .time{
+        position: absolute;
+        bottom: 5px;
+        right:5px;
+        z-index:2;
+        text-align: center;
+        line-height: 22px;
+      }
+    }
+    .tuangou-icon{
+      position: absolute;
+      top:0;
+      left:0;
+      z-index:2;
+      width:80px;
+      height:80px;
+      background: url("../images/tuangou-icon.png") 0 0 no-repeat;
+    }
+  }
+}
+.picList-box2{
+  background: @color-fff;
+  padding:15px 10px;
+  .thumbnail{
+    .bottom-con{
+      padding-top:50px;
+    }
+  }
+}
+.pageBox{
+  text-align: center;
+  margin:0 auto;
+  height:30px;
+  .oh();
+  .page-icon{
+    width:30px;
+    height:3px;
+    .d_ib();
+    a{
+      .db();
+    }
+  }
+  .page-num{
+   line-height: 25px;
+    border:1px solid @color-little-word;
+    margin:0 5px;
+    .d_ib();
+    a{
+      padding:0px 8px;
+      border-right: 1px solid @color-little-word;
+      color:@color-main;
+      .d_ib();
+      &:last-child{
+        border-right: 0;
+      }
+      &.cur{
+        color:@color-little-word;
+      }
+    }
+  }
+  .icon-prev{
+    background: url("../images/page-icon-pre.png" ) 0 0 no-repeat;
+  }
+  .icon-next{
+       background: url("../images/page-icon-next.png" ) 0 0 no-repeat;
+     }
+}
+/*精品列表页*/
+.main-content-box{
+  margin:40px 0;
+  .oh();
+}
+.main-conten-top{
+  position: relative;
+  .db();
+  border-bottom:1px solid @color-lines;
+  .oh();
+}
+.lg-header{
+  padding-left:10px;
+  line-height: 40px;
+  .fontsize(24px);
+  font-weight: bold;
+  .fl();
+}
+.margin-header{
+  width:100%;
+  margin-top:52px;
+}
+
+
+/*底部*/
+.footerBox{
+  height:34px;
+  line-height: 34px;
+  background: @color-footer-bg;
+  .border-radius(5px);
+  text-align: center;
+  margin:0 auto 10px;
+  p{
+    color:@color-main;
+    font-weight: bold;
+    span{
+      color:@color-fff;
+      .border-radius(5px);
+      background: @color-main;
+      padding:2px 5px;
+    }
+  }
+}
+
+.lines-box{
+  width:100%;
+  height:5px;
+  background: @color-little-bg;
+  clear:both;
+}
+.gray-bg{
+  background: @color-little-bg;
+}
+.main-color{
+  color:@color-main;
+}
+.red{
+  color:@color-red;
+}
+.green{
+  color:#22ac38;
+}
+
+.little-word{
+  color:@color-little-word;
+}
+.item2,.item3{
+  display: none;
+}
+.green-bg{
+  background:#22ac38;
+}
+.red-bg{
+  background:@color-red;
+}
+.orange-bg{
+  background:@color-orange;
+}
+.blue-bg{
+  background: @color-main;
+}
+/*超小屏*/
+//@media screen and (max-device-width: 320px) {
+//  .formBox1 {
+//    .fontsize(1.2em);
+//  }
+//}
+
+/*超小屏*/
+//@media screen and (max-device-width: 768px) {
+//  .yd-main{
+//    button{
+//      .fontsize(1.0rem);
+//    }
+//  }
+//}
+/*小屏*/
+//@media screen and (min-width: 768px) and (max-device-width: 992px){
+//  .yd-main{
+//    button{
+//      .fontsize(1.2rem);
+//    }
+//  }
+//
+//}
+/*中屏*/
+//@media screen and (min-width: 992px) and (max-device-width: 1200px) {
+//  .yd-main{
+//      button{
+//        .fontsize(1.2rem);
+//      }
+//  }
+//  /*登录页*/
+//  .mainConBox{
+//    width:80%;
+//  }
+//
+//}
+/*大屏*/
+//@media screen and (min-device-width: 1200px) {
+//  .yd-main{
+//    .login-btn{
+//      margin-left:-150px;
+//      width:300px;
+//      button{
+//        .fontsize(1.5rem);
+//      }
+//    }
+//  }
+//  .mainConBox{
+//    width:80%;
+//  }
+//}
