@@ -42,5 +42,6 @@ $(function () {
                 $("#search-scroll").removeClass("searchBox2-xs-fixed");
             }
         })
+        $(".containerBox .fixheight").css("height","auto");
     }
 })
