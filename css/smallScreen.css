@@ -248,7 +248,7 @@ button:focus {
   vertical-align: middle;
 }
 .searchBox .hot-search {
-  padding: 0 15px;
+  padding: 5px 15px;
   overflow: hidden;
 }
 .searchBox .hot-search span {
@@ -439,7 +439,7 @@ button:focus {
 }
 .pageBox {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   height: 30px;
   overflow: hidden;
 }
@@ -496,6 +496,24 @@ button:focus {
 .margin-header {
   width: 100%;
   margin-top: 52px;
+}
+/*常见问题*/
+.text-List-box {
+  clear: both;
+  padding: 10px 0;
+  border-top: 1px solid #dcdcdc;
+}
+.text-List-con {
+  width: 80%;
+  float: left;
+}
+.text-List-con h3 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+}
+.text-List-con p {
+  line-height: 20px;
 }
 /*底部*/
 .footerBox {
