@@ -13,12 +13,6 @@ $(function () {
         $(".newsBox").removeClass("import-news-xs");
         $(".picList-box2 .pageBox").addClass("pull-right");
     };
-    $(".searchBox-xs .search-input").focus(function(){
-        $(".hot-search").stop().show();
-    });
-    $(".searchBox-xs .search-input") .blur(function () {
-        $(".hot-search").stop().hide();
-    })
     /*通知*/
     $(".import-news li span").click(function () {
         $(this).parents("li").stop().hide();

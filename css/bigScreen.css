@@ -252,18 +252,21 @@ button:focus {
   margin-right: 5px;
   vertical-align: middle;
 }
-.searchBox .hot-search {
+.hot-search {
   padding: 5px 15px;
   font-weight: bold;
   overflow: hidden;
 }
-.searchBox .hot-search span {
+.hot-search p {
   float: left;
   padding-top: 4px;
 }
-.searchBox .hot-search label {
+.hot-search label {
   padding-left: 0;
   font-weight: bold;
+}
+.hot-search .search-label {
+  padding-left: 32px;
 }
 .searchBox2 {
   overflow: hidden;
@@ -706,6 +709,30 @@ button:focus {
 }
 .search-box-little .little-word {
   font-size: 12px;
+}
+/*表格*/
+.table-default-box {
+  margin-bottom: 10px;
+}
+.table-default-box tr,
+.table-default-box th {
+  text-align: center;
+}
+.table-default-box td {
+  color: #044484;
+}
+.table-default-box em {
+  width: 17px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.table-default-box thead em {
+  background: url("../images/iphone-icon.png") 0 -37px no-repeat;
+}
+.table-default-box tbody em {
+  background: url("../images/iphone-icon.png") 0 0 no-repeat;
 }
 /*底部*/
 .footerBox {

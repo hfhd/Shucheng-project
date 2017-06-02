@@ -301,18 +301,21 @@ button:focus{
     margin-right:5px;
     vertical-align: middle;
   }
-  .hot-search{
-    padding:5px 15px;
+}
+.hot-search{
+  padding:5px 15px;
+  font-weight: bold;
+  .oh();
+  p{
+    .fl();
+    padding-top:4px;
+  }
+  label{
+    padding-left:0;
     font-weight: bold;
-    .oh();
-    span{
-      .fl();
-      padding-top:4px;
-    }
-    label{
-      padding-left:0;
-      font-weight: bold;
-    }
+  }
+  .search-label{
+    padding-left:32px;
   }
 }
 .searchBox2{
@@ -774,6 +777,36 @@ button:focus{
   }
   .little-word{
     .fontsize(12px);
+  }
+}
+.text-section-con{
+
+}
+/*表格*/
+.table-default-box{
+    margin-bottom:10px;
+  tr,th{
+    text-align: center;
+  }
+  td{
+    color:@color-ggl;
+  }
+  em{
+    width:17px;
+    height:20px;
+    .d_ib();
+    vertical-align: middle;
+    margin-right:5px;
+  }
+  thead{
+    em{
+      background: url("../images/iphone-icon.png")  0 -37px   no-repeat;
+    }
+  }
+  tbody{
+    em{
+      background: url("../images/iphone-icon.png") 0 -0 no-repeat;
+    }
   }
 }
 /*底部*/
