@@ -78,42 +78,43 @@
         </form>
         <div class="hot-search">
             <span>搜索：</span>
-            <div class="checkbox">
-                <label>
-                    <input type="radio">  全部字段
-                </label>
-            </div>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline"  value="option1" checked>全部字段
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline"  value="option2">书名
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline"  value="option1">作者
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline"  value="option2">ISBN
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="optionsRadiosinline"  value="option2">ASIN
+            </label>
         </div>
     </div>
     <div class="lines-box visible-xs"></div>
-    <div class="newsBox import-news import-news-xs ">
+    <div class="newsBox import-news col-padding-no marginlr-xs">
         <div class="panel  panel-default">
-            <div class="panel-heading hidden-xs">
+            <div class="panel-heading">
                 <h3 class="panel-title">重要通知</h3>
             </div>
-            <div class="panel-heading-xs visible-xs  ">
-                <p class="panel-title">重要通知</p>
-            </div>
-            <ul class="list-group list-group-xs scroll-news">
-                <li class="list-group-item"><a href="#">免费域名注册<span class="hidden-xs">忽略</span></a> </li>
-                <li class="list-group-item"><a href="#">免费域名注册<span class="hidden-xs">忽略</span></a> </li>
-                <li class="list-group-item"><a href="#">免费域名注册<span class="hidden-xs" >忽略</span></a> </li>
-                <li class="list-group-item"><a href="#">免费域名注册<span class="hidden-xs">忽略</span></a> </li>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">免费域名注册<span>忽略</span></a> </li>
+                <li class="list-group-item"><a href="#">免费域名注册<span>忽略</span></a> </li>
+                <li class="list-group-item"><a href="#">免费域名注册<span>忽略</span></a> </li>
+                <li class="list-group-item"><a href="#">免费域名注册<span>忽略</span></a> </li>
             </ul>
         </div>
     </div>
     <div class="lines-box visible-xs"></div>
-    <div class="containerBox containerBox-xs">
+    <div class="containerBox col-padding-no">
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-4 no-padding-r ">
-                <div class="panel panel-default ">
-                    <div class="panel-heading hidden-xs">热门搜索主题</div>
-                    <div class="panel-heading-xs visible-xs">热门搜索主题</div>
-                    <div class="navToggle-title  navToggle-title-xs visible-xs">
-                        <p class="list-l cur">按名称排序</p>
-                        <p class="list-l">按大小排序</p>
-                        <p class="list-l">按人气排序</p>
-                    </div>
+                <div class="panel panel-default marginlr-xs">
+                    <div class="panel-heading">热门搜索主题</div>
                     <div class="navToggle-con">
                         <div class="item item1">
                             <ul class="list-group">
@@ -158,7 +159,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="navToggle-title navToggle-title-noxs hidden-xs">
+                    <div class="navToggle-title navToggle-title-noxs ">
                         <p class="list-l cur">按名称排序</p>
                         <p class="list-l">按大小排序</p>
                         <p class="list-l">按人气排序</p>
@@ -167,9 +168,8 @@
             </div>
             <div class="lines-box visible-xs"></div>
             <div class="col-xs-12 col-sm-7 col-md-8 ">
-                <div class="panel panel-default fixheight" style="height:432px;">
-                    <div class="panel-heading hidden-xs">新闻和消息</div>
-                    <div class="panel-heading-xs visible-xs">新闻和消息</div>
+                <div class="panel panel-default fixheight marginlr-xs" style="height:482px;">
+                    <div class="panel-heading ">新闻和消息</div>
                     <div class="panel-body  panel-body-xs">
                         <p ><strong>• 2017-04-30</strong>  具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容 具体内容</p>
                         <p ><strong>• 2017-04-30</strong>  新用户教程：<a href="#" class="main-color">如何使用amazon.com礼品卡充值的说明。</a></p>
@@ -183,6 +183,9 @@
 
 <div class="footerBox mainConBox">
     <p>已登录账号:<span >12345ffg@gmail.com</span></p>
+</div>
+<div class="backTop-box">
+    <div class="backToTop"></div>
 </div>
 </body>
 </html>

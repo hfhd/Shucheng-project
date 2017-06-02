@@ -63,15 +63,17 @@ button:focus{
   white-space: nowrap;
 }
 
-@color-main:#118eeb;
-@color-main-hover:#3176b1;
+@color-main:#37a9e7 ;
+@color-main-hover:#3a5f98;
 @color-fff:#fff;
 @color-border:#c5c3c3;
 @color-red:#d70c30;
 @color-red-hover:#c00203;
 @color-little-word:#9d9d9e;
 @color-little-bg:#f5f5f5;
-@color-orange:#dd5700;
+@color-s-bg:#eee;
+@color-orange:#f95902;
+@color-orange-little:#ffe2cc;
 @color-middle-word:#7e7e7e;
 @color-footer-bg:#b3e2f7;
 @color-search-bg:#86b942;
@@ -123,6 +125,8 @@ button:focus{
 .nav-wrap{
   width:100%;
   border-bottom:1px solid @color-border;
+  -webkit-box-shadow:0px 1px 5px rgba(0,0,0,.2);
+  -moz-box-shadow:0px 1px 5px rgba(0,0,0,.2);
   box-shadow: 0px 1px 5px rgba(0,0,0,.2);
   .ebooks-logo{
     padding:0px 10px;
@@ -234,8 +238,10 @@ button:focus{
 .main-navBox{
   color:@color-fff;
   position: relative;
+  font-weight: bold;
   a{
     color:@color-fff;
+    font-weight: bold;
   }
   .navbar{
     margin-bottom:0px;
@@ -285,6 +291,7 @@ button:focus{
     color:@color-fff;
     .fontsize(18px);
     margin:0 5px;
+    font-weight: bold;
   }
   .search-icon{
     width:30px;
@@ -296,19 +303,15 @@ button:focus{
   }
   .hot-search{
     padding:5px 15px;
+    font-weight: bold;
     .oh();
     span{
       .fl();
       padding-top:4px;
     }
-    .checkbox{
-      .fl();
-      margin-top:0;
-      margin-bottom:0;
-      .border-radius(50%);
-      label{
-        padding-left:0;
-      }
+    label{
+      padding-left:0;
+      font-weight: bold;
     }
   }
 }
@@ -377,14 +380,14 @@ button:focus{
     font-weight: bold;
   }
   .navToggle-con{
-    margin:5px ;
+    margin:10px ;
   }
   .list-group{
     .oh();
     li{
       border:0;
-      height:32px;
-      line-height: 32px;
+      height:35px;
+      line-height: 35px;
       padding:0 0;
       span{
         .fr();
@@ -435,7 +438,6 @@ button:focus{
   .oh();
   .thumbnail{
     background: @color-little-bg;
-    position: relative;
     .border-radius(0px);
     img{
       border:1px solid #ddd;
@@ -474,20 +476,30 @@ button:focus{
         line-height: 22px;
       }
     }
-    .tuangou-icon{
-      position: absolute;
-      top:0;
-      left:0;
-      z-index:2;
-      width:80px;
-      height:80px;
-      background: url("../images/tuangou-icon.png") 0 0 no-repeat;
-    }
   }
 }
+.thumbnail{
+  position: relative;
+}
+.tuangou-icon{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:2;
+  width:80px;
+  height:80px;
+}
+.tg-ing{
+  background: url("../images/tuangou-icon.png") 0 0 no-repeat;
+}
+.tg-success{
+  background: url("../images/tuangou-icon-success.png") 0 0 no-repeat;
+}
+
 .picList-box2{
   background: @color-fff;
   padding:15px 10px;
+  margin:40px auto 0;
   .thumbnail{
     .bottom-con{
       padding-top:50px;
@@ -559,6 +571,8 @@ button:focus{
   clear: both;
   padding:10px 0;
   border-top:1px solid @color-lines;
+  .oh();
+  position: relative;
 }
 .text-List-con{
   width:80%;
@@ -572,8 +586,196 @@ button:focus{
     line-height: 20px;
   }
 }
+.tg-apply-btn{
+  background: #f39800;
+  border: #f39800;
+  .border-radius(15px);
+  padding:6px 20px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  position: absolute;
+  bottom: 10px;
+  right:10px;
+  .fr();
+}
+/*商品详情*/
+.detail-main-con{
+  margin:10px 0;
+  .thumbnail{
+    background: none;
+    .border-radius(0px);
+    img{
+      border:0;
+      width:150px;
+      height:220px;
+    }
+  }
+  .authors{
+    padding:10px;
+    font-weight: bold;
+    color:#3a5f98;
+    .fontsize(16px);
+  }
+  .author-box{
+    width:100%;
+    .oh();
+    span{
+      .fontsize(12px);
+      padding:11px 10px;
+    }
+    .fl-w{
+      width:20%;
+      padding:11px 0;
+    }
+    .fr-w{
+      width:79%;
+      span{
+        width:100%;
+        .d_ib();
+      }
+    }
+  }
+  .author-box2{
+    .fl-w,.fr-w{
+      width:auto;
+    }
+    .fl-w{
+      margin-right:5px;
+    }
+  }
+  .author{
+    border:1px solid #ddd;
+    padding:10px;
+  }
+  .gs,.money{
+    padding:5px 0px;
+    .db();
+    text-align: center;
+  }
+  .gs{
+    width:100px;
+    border:1px solid #ddd;
+  }
+  .money{
+    border:1px solid @color-little-word;
+    .fontsize(18px);
+    font-weight: bold;
+    width:150px;
+  }
+  .gray-bg{
+    background: @color-s-bg;
+  }
+  .sp-pic-big{
+    img{
+      width:190px;
+      height:280px;
+    }
+  }
 
-
+}
+.spcs-hide{
+  display: none;
+}
+.pl-list-box{
+  .list-group{
+    padding:5px;
+    margin-bottom:0;
+    li{
+      width:100%;
+      line-height: 40px;
+    }
+    strong{
+      .fontsize(18px);
+    }
+    .mc{
+      width:70px;
+      .d_ib();
+      color:@color-main-hover
+    }
+    .btn{
+      .fr();
+      background: @color-search-bg;
+      color:@color-fff;
+      .fontsize(16px);
+    }
+  }
+}
+.cp-intro{
+    .panel-heading{
+      font-weight: bold;
+    }
+    h4{
+      .fontsize(18px);
+      line-height: 25px;
+    }
+    p{
+      padding:4px;
+    }
+}
+.detail-main-box{
+  margin:20px auto;
+}
+.problem-tj-box{
+  .oh();
+  margin:50px auto 10px;
+  .form{
+    .fr();
+  }
+  .left{
+      .d_ib();
+    background: @color-little-bg;
+    padding:5px 10px 7px;
+    line-height: 1.42857143;
+    border:1px  solid #ccc;
+    .border-radius(4px);
+    font-weight: bold;
+  }
+  .form-inline{
+    .form-control{
+      width:400px;
+    }
+  }
+  .btn{
+    font-weight: bold;
+  }
+}
+/*需求登记*/
+.need-register-box{
+  .oh();
+  h3{
+    padding:10px 0;
+  }
+  p{
+    line-height: 20px;
+  }
+}
+.search-box-little{
+  width:100%;
+  position: relative;
+  .oh();
+  .left{
+    background: #c9c9c9;
+    display: inline-block;
+    padding: 5px 10px 7px;
+    line-height: 1.42857143;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+    width:20%;
+    text-align: center;
+  }
+    .form-group{
+      margin-left:-5px;
+      width:80%;
+      input{
+        width:100%;
+      }
+  }
+  .little-word{
+    .fontsize(12px);
+  }
+}
 /*底部*/
 .footerBox{
   height:34px;
@@ -581,7 +783,7 @@ button:focus{
   background: @color-footer-bg;
   .border-radius(5px);
   text-align: center;
-  margin:0 auto 10px;
+  margin:15px auto 10px;
   p{
     color:@color-main;
     font-weight: bold;
@@ -594,11 +796,105 @@ button:focus{
   }
 }
 
+/*立即购买 加入购物车 按钮*/
+.buy-button-inline{
+  margin-top:20px;
+  .btn {
+    .fontsize(18px);
+    padding: 6px 25px;
+  }
+}
+.buy-button-inline2{
+  .btn{
+    .border-radius(0);
+    padding:6px 20px;
+    color:@color-fff;
+    .fontsize(15px);
+    font-weight: bold;
+    margin:0 5px;
+  }
+  .btn-orange2{
+    background: #f39800;
+  }
+  .btn-green2{
+    background: #86b942;
+  }
+}
+.btn-orange{
+  background: @color-orange;
+  color:@color-fff;
+}
+.btn-green{
+  background: @color-search-bg;
+  color:@color-fff;
+}
+.btn-orange-little{
+  background: @color-orange-little;
+  color:@color-orange;
+}
+.buy-btn-gwc{
+  text-align: center;
+  .btn{
+    font-weight: bold;
+  }
+  em{
+    width:30px;
+    height:22px;
+    .d_ib();
+    background: url("../images/gwc-icon.png") 0 0 no-repeat;
+    vertical-align: middle;
+  }
+}
+.buy-button-hs-money{
+  border:1px solid  #ddd;
+  background: @color-little-bg;
+  padding:10px;
+  text-align: center;
+  .money2{
+    text-align: center;
+    .fontsize(18px);
+    color:@color-main-hover;
+    font-weight:bold;
+  }
+  .btn{
+    .fontsize(18px);
+  }
+}
+
+.shadow-4{
+  -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5);
+  -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5);
+  box-shadow:0 0 10px rgba(0, 0, 0, .5);
+}
+.shadow-2{
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+.fl{
+  .fl();
+}
+.fr{
+  .fr();
+}
+.detail-main-con{
+  .radius{
+    .border-radius(4px);
+  }
+}
+.margin-bot{
+  margin-bottom: 20px;
+}
 .lines-box{
   width:100%;
   height:5px;
   background: @color-little-bg;
   clear:both;
+}
+.lines-box-l{
+  width:100%;
+  height:1px;
+  background: @color-lines;
 }
 .gray-bg{
   background: @color-little-bg;
@@ -606,11 +902,15 @@ button:focus{
 .main-color{
   color:@color-main;
 }
+
 .red{
   color:@color-red;
 }
 .green{
   color:#22ac38;
+}
+.orange{
+  color:@color-orange;
 }
 
 .little-word{
@@ -631,6 +931,10 @@ button:focus{
 .blue-bg{
   background: @color-main;
 }
+.checkbox-inline, .radio-inline{
+  padding-left:0;
+}
+
 /*超小屏*/
 //@media screen and (max-device-width: 320px) {
 //  .formBox1 {
