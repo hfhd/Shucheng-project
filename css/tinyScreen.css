@@ -206,12 +206,6 @@ button:focus {
 .main-navBox .navbar-right a:hover {
   color: #37a9e7;
 }
-.main-navBox .back-left {
-  width: 20px;
-  height: 25px;
-  display: inline-block;
-  background: url("../images/back-left-icon.png") 0 0 no-repeat;
-}
 .main-navBox .menu-right {
   width: 25px;
   height: 25px;
@@ -253,7 +247,7 @@ button:focus {
   vertical-align: middle;
 }
 .hot-search {
-  padding: 5px 15px;
+  padding: 4px 15px;
   font-weight: bold;
   overflow: hidden;
 }
@@ -286,7 +280,6 @@ button:focus {
 .searchBox2 .navbar-form .search-input {
   height: 30px;
   width: 100%;
-  border-radius: 15px;
 }
 .searchBox2 .navbar-form .btn {
   background: none;
@@ -327,7 +320,8 @@ button:focus {
 .containerBox .panel-heading {
   font-weight: bold;
 }
-.containerBox .navToggle-con {
+.containerBox .navToggle-con,
+.containerBox .selectToggle-con {
   margin: 10px ;
 }
 .containerBox .list-group {
@@ -556,7 +550,6 @@ button:focus {
   height: 220px;
 }
 .detail-main-con .authors {
-  padding: 10px;
   font-weight: bold;
   color: #3a5f98;
   font-size: 16px;
@@ -570,11 +563,7 @@ button:focus {
   padding: 11px 10px;
 }
 .detail-main-con .author-box .fl-w {
-  width: 20%;
-  padding: 11px 0;
-}
-.detail-main-con .author-box .fr-w {
-  width: 79%;
+  padding: 9px 0;
 }
 .detail-main-con .author-box .fr-w span {
   width: 100%;
@@ -588,8 +577,7 @@ button:focus {
   margin-right: 5px;
 }
 .detail-main-con .author {
-  border: 1px solid #ddd;
-  padding: 10px;
+  padding-right: 5px;
 }
 .detail-main-con .gs,
 .detail-main-con .money {
@@ -598,8 +586,7 @@ button:focus {
   text-align: center;
 }
 .detail-main-con .gs {
-  width: 100px;
-  border: 1px solid #ddd;
+  text-align: left;
 }
 .detail-main-con .money {
   border: 1px solid #9d9d9e;
@@ -710,6 +697,29 @@ button:focus {
 .search-box-little .little-word {
   font-size: 12px;
 }
+.text-section-con .text-section {
+  padding: 8px 0;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.text-section-con .text-section p {
+  line-height: 20px;
+}
+.text-section-con .text-section strong {
+  width: 50px;
+  display: inline-block;
+}
+.text-section-con .text-section2 p {
+  padding-bottom: 15px;
+}
+.text-section-con .text-section2 a {
+  color: #017cfa;
+}
+.text-section-con .text-section2 .pic {
+  width: 100%;
+  height: auto;
+  margin: 10px auto 15px;
+}
 /*表格*/
 .table-default-box {
   margin-bottom: 10px;
@@ -729,10 +739,126 @@ button:focus {
   margin-right: 5px;
 }
 .table-default-box thead em {
-  background: url("../images/iphone-icon.png") 0 -37px no-repeat;
+  background: url("../images/iphone-icon.png") 0 0 no-repeat;
 }
 .table-default-box tbody em {
-  background: url("../images/iphone-icon.png") 0 0 no-repeat;
+  background: url("../images/iphone-icon-blue.png") 0 0 no-repeat;
+}
+/*充值*/
+.well-ye {
+  font-size: 18px;
+  margin: 0 auto 20px;
+}
+.well-ye span {
+  background: #696868;
+  color: #fff;
+  padding: 2px 20px;
+  border-radius: 15px;
+}
+.recharge-box-con {
+  overflow: hidden;
+}
+.recharge-box-con .thumbnail {
+  overflow: hidden;
+  padding: 0px 0;
+}
+.recharge-box-con img {
+  width: auto;
+  height: auto;
+}
+.recharge-box-con .cz-con-xz {
+  overflow: hidden;
+  text-align: center;
+  line-height: 35px;
+}
+.recharge-box-con .cz-con-xz .list-l {
+  background: #f5f5f5;
+  width: 50%;
+  font-weight: bold;
+  font-size: 18px;
+}
+.recharge-box-con .cz-con-xz .list-l.cur {
+  background: #fff;
+  border-bottom: 0;
+}
+.recharge-box-con .cz-con .item {
+  padding: 10px 5px;
+  text-align: center;
+}
+.recharge-box-con .cz-con .code {
+  width: 200px;
+  height: 200px;
+  padding-bottom: 4px;
+}
+.recharge-box-con .cz-con-qr .form-group {
+  overflow: hidden;
+  margin: 10px 5px;
+  font-size: 16px;
+}
+.recharge-box-con .cz-con-qr .sc-pic .pic {
+  width: 80px;
+  height: 40px;
+  background: url("../images/sc-pic-add.png") 0 0 no-repeat;
+  cursor: pointer;
+}
+.recharge-box-con .cz-con-qr .sc-pic p {
+  font-size: 12px;
+}
+.recharge-box-con .btn {
+  padding: 6px 30px;
+}
+.recharge-box-con .w-czk {
+  font-size: 18px;
+}
+.recharge-box .text-section-con {
+  font-weight: bold;
+  margin-top: 30px;
+}
+.recharge-box h3 {
+  font-weight: bold;
+}
+.recharge-box .ymx-cz-ts {
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 16px;
+}
+.ymx-cz-search {
+  margin: 15px 0;
+}
+.ymx-cz-search .form-inline {
+  overflow: hidden;
+}
+.ymx-cz-search .left {
+  display: inline-block;
+  background: #f5f5f5;
+  padding: 6px 0px 7px;
+  line-height: 1.42857143;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 1px;
+}
+.ymx-cz-search .form-list {
+  margin: 5px 0;
+}
+.ymx-cz-search .btn {
+  clear: both;
+}
+/*购买结果*/
+.buyresult-box {
+  width: 80%;
+  background: #e9fce1;
+  border: 1px solid #097c25;
+  border-radius: 2px;
+  margin: 80px auto 0;
+  padding: 40px 10px;
+  text-align: center;
+}
+.buyresult-box .btn {
+  margin: 20px auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /*底部*/
 .footerBox {
@@ -752,6 +878,18 @@ button:focus {
   border-radius: 5px;
   background: #37a9e7;
   padding: 2px 5px;
+}
+/*热门搜索主题*/
+.hot-topic-box {
+  margin: 20px 0;
+}
+.hot-topic-box .panel-heading {
+  overflow: hidden;
+  line-height: 30px;
+}
+.hot-topic-box .form-control {
+  height: auto;
+  padding: 3px 10px;
 }
 /*立即购买 加入购物车 按钮*/
 .buy-button-inline {
@@ -781,6 +919,10 @@ button:focus {
 }
 .btn-green {
   background: #86b942;
+  color: #fff;
+}
+.btn-green:hover {
+  background: #6e9836 ;
   color: #fff;
 }
 .btn-orange-little {
@@ -815,6 +957,25 @@ button:focus {
 .buy-button-hs-money .btn {
   font-size: 18px;
 }
+/*充值2 well*/
+.text-well-box .well {
+  text-align: center;
+}
+.text-well-box .well p {
+  padding: 5px;
+}
+.text-well-box .well p span {
+  display: block;
+}
+.text-well-box .well-bg-green {
+  background: #d4eea1;
+}
+.text-well-box .well-bg-yellow {
+  background: #fae89c;
+}
+.text-well-box .well-bg-orange {
+  background: #feb16d;
+}
 .shadow-4 {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -830,6 +991,22 @@ button:focus {
 }
 .fr {
   float: right;
+}
+.w-czk {
+  width: 100%;
+}
+.jc {
+  display: block;
+}
+.jc .btn {
+  background: #004986;
+}
+.jc .btn:hover {
+  color: #fff;
+  background: #6e84a9;
+}
+.clear-both {
+  clear: both;
 }
 .detail-main-con .radius {
   border-radius: 4px;
@@ -940,13 +1117,6 @@ button:focus {
     right: 10px;
     width: auto;
   }
-  .navbar-xs .right-button .btn-tc {
-    float: right;
-    background: none;
-    border: none;
-    line-height: 50px;
-    font-size: 16px;
-  }
   .navbar-xs .right-button .btn-menu {
     float: left;
   }
@@ -956,11 +1126,11 @@ button:focus {
   }
   /*s首页 搜索*/
   .searchBox {
-    width: 96%;
+    width: 100%;
     padding: 0 3%;
   }
   .searchBox-xs .navbar-form {
-    padding: 5px 15px;
+    padding: 5px 15px 0 5px;
     position: relative;
     margin: 0 auto;
   }
@@ -969,14 +1139,20 @@ button:focus {
   }
   .searchBox-xs .navbar-form .search-input {
     height: 30px;
-    border-radius: 15px;
-    background: #eff0f1;
   }
   .searchBox-xs .navbar-form .btn {
     background: none;
     position: absolute;
-    top: 0px;
-    right: 5px;
+    top: 6px;
+    right: 16px;
+    background: #f5f5f5;
+    padding: 0 0 0 2px;
+    height: 28px;
+    border-left: 1px solid #ccc;
+    border-radius: 0;
+  }
+  .searchBox-xs .search-icon {
+    background: url("../images/search-icon-gray.png") 0 0 no-repeat;
   }
   .searchBox2-xs {
     width: 60%;
@@ -997,7 +1173,13 @@ button:focus {
     height: 21px;
   }
   .searchBox2-xs .navbar-form .btn {
-    right: 0px;
+    right: 4px;
+    top: 4px;
+    background: #f5f5f5;
+    padding: 0 0 0 2px;
+    height: 28px;
+    border-left: 1px solid #ccc;
+    border-radius: 0;
   }
   .searchBox2-xs-fixed {
     width: 100%;
@@ -1007,6 +1189,13 @@ button:focus {
     left: 0;
     z-index: 999;
     background: #fff;
+  }
+  .hot-search {
+    padding: 0 0 5px 0;
+  }
+  .hot-search .checkbox-inline {
+    margin-left: 0;
+    font-weight: normal;
   }
   /*书籍列表*/
   .picList-box {
@@ -1089,12 +1278,6 @@ button:focus {
   .cp-intro-xs {
     padding: 0 5px;
   }
-  .detail-main-con .author-box .fl-w {
-    width: 12%;
-  }
-  .detail-main-con .author-box .fr-w {
-    width: 86%;
-  }
   .detail-main-con .author-box2 .fl-w,
   .detail-main-con .author-box2 .fr-w {
     width: auto;
@@ -1133,13 +1316,32 @@ button:focus {
     margin: 5px 0;
   }
   .search-box-little .left {
-    width: 50%;
+    width: 60%;
+  }
+  .text-section-con .text-section {
+    border-bottom: 1px dashed #dcdcdc;
   }
   /*a按钮*/
-  .buy-button-inline2 {
+  .buy-button-inline2-xs {
     float: none;
     text-align: center;
-    width: 94%;
+  }
+  /*表格*/
+  .table-default-box thead em,
+  .table-default-box tbody em {
+    width: 12px;
+    height: 14px;
+    background-size: 12px 14px;
+    margin-right: 2px;
+  }
+  /*充值页面*/
+  .recharge-box .text-section-con {
+    margin-top: 0px;
+  }
+  .recharge-box .ymx-cz-ts {
+    font-weight: bold;
+    padding: 5px 2px;
+    font-size: 14px;
   }
   .thumbnail {
     margin-bottom: 10px;
@@ -1161,18 +1363,102 @@ button:focus {
     margin-right: 0;
     margin-left: 0;
   }
+  .col-padding-no .col-lg-1,
+  .recharge-box .col-lg-1,
+  .col-padding-no .col-lg-10,
+  .recharge-box .col-lg-10,
+  .col-padding-no .col-lg-11,
+  .recharge-box .col-lg-11,
+  .col-padding-no .col-lg-12,
+  .recharge-box .col-lg-12,
+  .col-padding-no .col-lg-2,
+  .recharge-box .col-lg-2,
+  .col-padding-no .col-lg-3,
+  .recharge-box .col-lg-3,
+  .col-padding-no .col-lg-4,
+  .recharge-box .col-lg-4,
+  .col-padding-no .col-lg-5,
+  .recharge-box .col-lg-5,
+  .col-padding-no .col-lg-6,
+  .recharge-box .col-lg-6,
+  .col-padding-no .col-lg-7,
+  .recharge-box .col-lg-7,
+  .col-padding-no .col-lg-8,
+  .recharge-box .col-lg-8,
+  .col-padding-no .col-lg-9,
+  .recharge-box .col-lg-9,
+  .col-padding-no .col-md-1,
+  .recharge-box .col-md-1,
+  .col-padding-no .col-md-10,
+  .recharge-box .col-md-10,
+  .col-padding-no .col-md-11,
+  .recharge-box .col-md-11,
+  .col-padding-no .col-md-12,
+  .recharge-box .col-md-12,
+  .col-padding-no .col-md-2,
+  .recharge-box .col-md-2,
+  .col-padding-no .col-md-3,
+  .recharge-box .col-md-3,
+  .col-padding-no .col-md-4,
+  .recharge-box .col-md-4,
+  .col-padding-no .col-md-5,
+  .recharge-box .col-md-5,
+  .col-padding-no .col-md-6,
+  .recharge-box .col-md-6,
+  .col-padding-no .col-md-7,
+  .recharge-box .col-md-7,
+  .col-padding-no .col-md-8,
+  .recharge-box .col-md-8,
+  .col-padding-no .col-md-9,
+  .recharge-box .col-md-9,
+  .col-padding-no .col-sm-1,
+  .recharge-box .col-sm-1,
+  .col-padding-no .col-sm-10,
+  .recharge-box .col-sm-10,
+  .col-padding-no .col-sm-11,
+  .recharge-box .col-sm-11,
+  .col-padding-no .col-sm-12,
+  .recharge-box .col-sm-12,
+  .col-padding-no .col-sm-2,
+  .recharge-box .col-sm-2,
+  .col-padding-no .col-sm-3,
+  .recharge-box .col-sm-3,
+  .col-padding-no .col-sm-4,
+  .recharge-box .col-sm-4,
+  .col-padding-no .col-sm-5,
+  .recharge-box .col-sm-5,
+  .col-padding-no .col-sm-6,
+  .recharge-box .col-sm-6,
+  .col-padding-no .col-sm-7,
+  .recharge-box .col-sm-7,
+  .col-padding-no .col-sm-8,
+  .recharge-box .col-sm-8,
+  .col-padding-no .col-sm-9,
+  .recharge-box .col-sm-9,
   .col-padding-no .col-xs-1,
+  .recharge-box .col-xs-1,
   .col-padding-no .col-xs-10,
+  .recharge-box .col-xs-10,
   .col-padding-no .col-xs-11,
+  .recharge-box .col-xs-11,
   .col-padding-no .col-xs-12,
+  .recharge-box .col-xs-12,
   .col-padding-no .col-xs-2,
+  .recharge-box .col-xs-2,
   .col-padding-no .col-xs-3,
+  .recharge-box .col-xs-3,
   .col-padding-no .col-xs-4,
+  .recharge-box .col-xs-4,
   .col-padding-no .col-xs-5,
+  .recharge-box .col-xs-5,
   .col-padding-no .col-xs-6,
+  .recharge-box .col-xs-6,
   .col-padding-no .col-xs-7,
+  .recharge-box .col-xs-7,
   .col-padding-no .col-xs-8,
-  .col-padding-no .col-xs-9 {
+  .recharge-box .col-xs-8,
+  .col-padding-no .col-xs-9,
+  .recharge-box .col-xs-9 {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1253,5 +1539,10 @@ button:focus {
   }
   .picList-box .thumbnail .caption {
     padding: 9px 4px 0;
+  }
+  /*购买结果*/
+  .buyresult-box {
+    width: 96%;
+    margin: 25% 2%;
   }
 }

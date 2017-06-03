@@ -25,6 +25,21 @@ $(function () {
         $(".navToggle-con .item").eq($num).stop().show().siblings().stop().hide();
     })
 })
+//排序方式
+// $(function () {
+//     var selected = $('.selectToggle-title>option:selected');
+//     console.log("8888");
+//     selected.val(function(){
+//         $index = $(this).index();
+//         return true;
+//     })
+//     console.log($index);
+//     $(".selectToggle-con .item").eq($index).stop().show().siblings().stop().hide();
+//     $(".selectToggle-title").change(function(){
+//         $num = $(this).children('option:selected').index();
+//         $(".selectToggle-con .item").eq($num).stop().show().siblings().stop().hide();
+//     });
+// })
 $(function () {
     /*超小屏*/
     if ((screen.width <=767) ) {

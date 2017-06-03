@@ -54,13 +54,13 @@
       top:0px;
       right: 10px;
       width:auto;
-      .btn-tc{
-        float: right;
-        background: none;
-        border:none;
-        line-height: 50px;
-        .fontsize(16px);
-      }
+      //.btn-tc{
+      //  float: right;
+      //  background: none;
+      //  border:none;
+      //  line-height: 50px;
+      //  .fontsize(16px);
+      //}
       .btn-menu{
         float: left;
       }
@@ -75,12 +75,12 @@
 
   /*s首页 搜索*/
   .searchBox{
-    width:96%;
+    width:100%;
     padding:0 3%;
   }
   .searchBox-xs{
     .navbar-form{
-      padding:5px 15px;
+      padding:5px 15px 0 5px;
       position: relative;
       margin:0 auto;
       .form-group{
@@ -88,15 +88,21 @@
       }
       .search-input{
         height:30px;
-        .border-radius(15px);
-        background: #eff0f1;
       }
       .btn{
         background: none;
         position: absolute;
-        top:0px;
-        right:5px;
+        top:6px;
+        right:16px;
+        background: @color-little-bg;
+        padding:0 0 0 2px;
+        height:28px;
+        border-left:1px solid #ccc;
+        .border-radius(0);
       }
+    }
+    .search-icon{
+      background: url("../images/search-icon-gray.png") 0 0 no-repeat;
     }
   }
   .searchBox2-xs{
@@ -116,7 +122,13 @@
         height:21px;
       }
       .btn{
-        right:0px;
+        right:4px;
+        top:4px;
+        background: @color-little-bg;
+        padding:0 0 0 2px;
+        height:28px;
+        border-left:1px solid #ccc;
+        .border-radius(0);
       }
     }
   }
@@ -128,6 +140,16 @@
     left:0;
     z-index:999;
     background: @color-fff;
+  }
+  .hot-search{
+    padding:0 0 5px 0;
+    .checkbox-inline{
+      margin-left:0;
+      font-weight: normal;
+    }
+    input[type=checkbox]{
+
+    }
   }
   /*书籍列表*/
   .picList-box{
@@ -219,14 +241,14 @@
     padding:0 5px;
   }
   .detail-main-con {
-    .author-box {
-      .fl-w{
-        width:12%;
-      }
-      .fr-w{
-        width:86%;
-      }
-    }
+    //.author-box {
+    //  .fl-w{
+    //    width:12%;
+    //  }
+    //  .fr-w{
+    //    width:86%;
+    //  }
+    //}
     .author-box2{
       .fl-w,.fr-w{
         width:auto;
@@ -272,15 +294,43 @@
       margin:5px 0;
     }
     .left{
-      width:50%;
+      width:60%;
+    }
+  }
+  .text-section-con{
+    .text-section{
+      border-bottom:1px dashed @color-lines;
     }
   }
   /*a按钮*/
-  .buy-button-inline2{
+  .buy-button-inline2-xs{
     float: none;
     text-align: center;
-    width:94%;
   }
+  /*表格*/
+  .table-default-box{
+    thead,tbody{
+      em{
+          width:12px;
+          height:14px;
+        background-size: 12px 14px;
+        margin-right:2px;
+      }
+    }
+  }
+  /*充值页面*/
+  .recharge-box {
+    .text-section-con {
+      margin-top: 0px;
+    }
+    .ymx-cz-ts{
+      font-weight: bold;
+      padding:5px 2px;
+      .fontsize(14px);
+    }
+  }
+
+
   .thumbnail{
     margin-bottom:10px;
     img{
@@ -301,8 +351,8 @@
     margin-right:0;
     margin-left:0;
   }
-  .col-padding-no{
-    .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+  .col-padding-no,.recharge-box{
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
       padding-left:0;
       padding-right:0;
     }
@@ -335,6 +385,11 @@
         padding:9px 4px 0;
       }
     }
+  }
+  /*购买结果*/
+  .buyresult-box{
+    width:96%;
+    margin:25% 2%;
   }
 }
 
