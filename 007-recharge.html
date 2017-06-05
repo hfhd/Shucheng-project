@@ -73,20 +73,22 @@
         <div class="well well-sm well-ye marginlr-xs"><strong>您的余额：</strong><span>￥59.36</span></div>
         <div class="recharge-box marginlr-xs">
                 <div class="row ">
-                    <div class="col-xs-12 col-sm-6 recharge-box-con">
+                    <div class="col-xs-12 col-sm-6 recharge-box-con margin-bot">
                         <div class="thumbnail">
                             <div class="cz-con-xz navToggle-title">
                                 <p class="select-cz cz-zfb list-l fl cur">通过支付宝充值</p>
                                 <p class="select-cz cz-wx list-l fr">通过微信充值</p>
                             </div>
                             <div class="cz-con navToggle-con" >
-                                <div class="item item1">
+                                <div class="item item1 zfb" >
+                                    <p class="title"><strong>支付宝扫码支付</strong></p>
                                     <img src="" class="code">
                                     <p><strong>收款账号：123343000@qq.com</strong></p>
                                 </div>
-                                <div class="item item2">
+                                <div class="item item2 wx">
+                                    <p class="title"><strong>微信扫码支付</strong></p>
                                     <img src="" class="code">
-                                    <p><strong>收款账号：1200@qq.com</strong></p>
+                                    <p><strong>收款账号：120000000000@qq.com</strong></p>
                                 </div>
                             </div>
                             <div class="lines-box-l"></div>
@@ -102,16 +104,25 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group ">
                                         <label for="firstname" class="col-xs-4 col-sm-4 col-md-3 control-label">充值金额：</label>
-                                        <div class="col-xs-8 col-sm-8 col-md-9">
-                                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                                        <div class="col-xs-8 col-sm-8 col-md-9 ">
+                                            <!--<input type="text" class="form-control" id="firstname" placeholder="请输入名字">-->
+                                                <label for="name" class="form-select-left">￥</label>
+                                                <select class="form-control fl" style="width: 80%;">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
                                         </div>
                                     </div>
                                     <div class="form-group sc-pic">
                                         <label for="firstname" class="col-xs-4 col-sm-4 col-md-3 control-label">截图上传：</label>
                                         <div class=" col-xs-8 col-sm-8 col-md-9">
                                             <div class="pic">
+                                                <img src="images/sc-pic-add.png">
                                             </div>
                                             <p class="">上传支付截图</p>
                                         </div>

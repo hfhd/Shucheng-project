@@ -18,11 +18,11 @@ h1,h2,h3,h4{
 p{
   margin:0 0 ;
 }
+a:hover,a:visited,a:link,a:active{
+  text-decoration: none;
+}
 a{
   text-decoration:none;
-  &:hover{
-    text-decoration: none;
-  }
 }
 button:focus{
   outline:0;
@@ -156,12 +156,15 @@ button:focus{
       vertical-align: middle;
       line-height: 1.42857143;
       padding-top:10px;
+      .fontsize(16px);
+      letter-spacing: 2px;
     }
     .form-control {
       height: auto;
       padding: 10px 5px;
       .border-radius(1px);
-      .fontsize(14px);
+      .fontsize(16px);
+      letter-spacing: 2px;
       &:hover{
         border:1px solid #c9c9c9;
       }
@@ -204,6 +207,7 @@ button:focus{
       background: @color-red-hover;
       color:@color-fff;
     }
+    .border-radius(4px);
   }
   .from-no-bottom{
     margin-bottom:5px;
@@ -218,6 +222,11 @@ button:focus{
       padding-top:8px;
       .d_ib();
     }
+  }
+  .form-control-static{
+    padding-top:11px;
+    font-weight: bold;
+    .fontsize(14px);
   }
 }
 .formBox2{
@@ -252,12 +261,6 @@ button:focus{
       color:@color-main;
     }
   }
-  //.back-left{
-  //  width:20px;
-  //  height:25px;
-  //  .d_ib() ;
-  //  background: url("../images/back-left-icon.png") 0 0 no-repeat;
-  //}
   .menu-right{
     width:25px;
     height:25px;
@@ -284,6 +287,8 @@ button:focus{
     .search-input{
       width:100%;
       height:45px;
+      .fontsize(16px);
+      letter-spacing: 2px;
     }
   }
   .btn-green{
@@ -308,7 +313,7 @@ button:focus{
   .oh();
   p{
     .fl();
-    padding-top:4px;
+    padding-top:2px;
   }
   label{
     padding-left:0;
@@ -316,6 +321,24 @@ button:focus{
   }
   .search-label{
     padding-left:32px;
+    label{
+      position: relative;
+      .oh();
+      input,span{
+        .db();
+      }
+      span{
+        .fl();
+        padding-left:2px;
+        margin-top:2px;
+      }
+      input{
+        .fl();
+      }
+      .english-top{
+        //margin-top:2px;
+      }
+    }
   }
 }
 .searchBox2{
@@ -334,6 +357,8 @@ button:focus{
     .search-input{
       height:30px;
       width:100%;
+      .fontsize(16px);
+      letter-spacing: 2px;
     }
     .btn{
       background: none;
@@ -363,7 +388,9 @@ button:focus{
       .db();
       color:@color-middle-word;
       span{
-        .fr();
+       position: absolute;
+        top:6px;
+        right:3px;
         background: @color-orange;
         padding:3px 20px;
         color:@color-fff;
@@ -373,6 +400,13 @@ button:focus{
         color:@color-main;
         text-decoration: none;
       }
+    }
+    .list-group-item{
+      position: relative;
+    }
+    .news-con{
+      width:80%;
+      .text-sl();
     }
   }
 }
@@ -434,19 +468,32 @@ button:focus{
     }
   }
 }
+
+
 /*书籍列表*/
 .picList-box{
   margin:40px auto;
   .oh();
   .thumbnail{
     background: @color-little-bg;
-    .border-radius(0px);
+    &:hover{
+      border:1px solid @color-little-word;
+    }
+    a{
+      display: block;
+    }
     img{
       border:1px solid #ddd;
+      width:155px;
+      height:220px;
     }
     .caption{
       padding:9px 0 0 0;
       .oh();
+      p.name{
+          height:66px;
+        .oh();
+      }
       p{
         line-height: 22px;
       }
@@ -460,6 +507,7 @@ button:focus{
       .money{
         font-weight: bold;
         .fr();
+        color:#04921b;
       }
       .classfiy-btn{
         position: absolute;
@@ -468,6 +516,8 @@ button:focus{
         color:@color-fff;
         .fontsize(0.75em);
         padding:1px 5px;
+        font-style: normal;
+        .border-radius(4px);
       }
       .time{
         position: absolute;
@@ -486,7 +536,7 @@ button:focus{
 .tuangou-icon{
   position: absolute;
   top:0;
-  left:0;
+  left:0px;
   z-index:2;
   width:80px;
   height:80px;
@@ -606,17 +656,23 @@ button:focus{
   margin:10px 0;
   .thumbnail{
     background: none;
-    .border-radius(0px);
+    border:0;
     img{
       border:0;
       width:150px;
       height:220px;
     }
   }
+  .pic-thum-fixed{
+    width:160px;
+    margin:10px auto;
+  }
   .authors{
     font-weight: bold;
     color:#3a5f98;
-    .fontsize(16px);
+  }
+  .authors2{
+    .fontsize(24px);
   }
   .author-box{
     width:100%;
@@ -638,15 +694,18 @@ button:focus{
     }
   }
   .author-box2{
+    margin:10px 0;
     .fl-w,.fr-w{
       width:auto;
     }
     .fl-w{
       margin-right:5px;
     }
+    .author{
+      .fontsize(18px);
+    }
   }
   .author{
-    //border:1px solid #ddd;
     padding-right:5px;
   }
   .gs,.money{
@@ -655,8 +714,11 @@ button:focus{
     text-align: center;
   }
   .gs{
-    //border:1px solid #ddd;
     text-align: left;
+    color:@color-fff;
+    padding:5px 20px;
+    .d_ib();
+    .border-radius(4px);
   }
   .money{
     border:1px solid @color-little-word;
@@ -713,6 +775,13 @@ button:focus{
     p{
       padding:4px;
     }
+  .detail{
+    display: none;
+  }
+  .click-add{
+    color:@color-main;
+    padding:5px 0;
+  }
 }
 .detail-main-box{
   margin:20px auto;
@@ -746,6 +815,7 @@ button:focus{
   .oh();
   h3{
     padding:10px 0;
+    font-weight: bold;
   }
   p{
     line-height: 20px;
@@ -771,6 +841,7 @@ button:focus{
       width:80%;
       input{
         width:100%;
+        .fontsize(18px);
       }
   }
   .little-word{
@@ -779,7 +850,7 @@ button:focus{
 }
 .text-section-con{
   .text-section{
-    padding:8px 0;
+    padding:3px 0;
     word-break : break-all;
     word-wrap : break-word ;
     p{
@@ -788,6 +859,7 @@ button:focus{
     strong{
       width:50px;
       .d_ib();
+      text-align: right;
     }
   }
   .text-section2{
@@ -804,6 +876,20 @@ button:focus{
       }
   }
 }
+.text-section3{
+  padding:10px 10px;
+  p{
+    padding:2px;
+  }
+  a{
+    color:@color-main;
+    &:hover{
+      color:@color-main-hover;
+      text-decoration:underline;
+    }
+  }
+}
+
 /*表格*/
 .table-default-box{
     margin-bottom:10px;
@@ -813,12 +899,21 @@ button:focus{
   td{
     color:@color-ggl;
   }
-  em{
-    width:17px;
-    height:20px;
-    .d_ib();
-    vertical-align: middle;
-    margin-right:5px;
+  //em{
+  //  width:17px;
+  //  height:20px;
+  //  .d_ib();
+  //  vertical-align: middle;
+  //  margin-right:5px;
+  //}
+  .checkbox{
+    margin-top:0;
+    margin-bottom:0;
+    thead{
+      label{
+        font-weight: bold;
+      }
+    }
   }
   thead{
     em{
@@ -870,13 +965,26 @@ button:focus{
   .cz-con{
     .item{
       padding:10px 5px;
-      text-align: center;
-
     }
     .code{
       width:200px;
       height:200px;
       padding-bottom:4px;
+    }
+    p{
+      padding:3px 0;
+    }
+    .zfb{
+      text-align: left;
+      .title{
+        padding-left:50px;
+      }
+    }
+    .wx{
+      text-align: right;
+      .title{
+        padding-right:50px;
+      }
     }
   }
   .cz-con-qr{
@@ -884,13 +992,22 @@ button:focus{
       .oh();
       margin:10px 5px;
       .fontsize(16px);
+      .control-label{
+        margin-top:4px;
+      }
     }
     .sc-pic{
         .pic{
           width:80px;
           height:40px;
-          background: url("../images/sc-pic-add.png") 0 0 no-repeat;
+          //background: url("../images/sc-pic-add.png") 0 0 no-repeat;
          cursor: pointer;
+          border:1px solid #414040;
+          background: #f5f5f5;
+          img{
+            width:78px;
+            height:40px;
+          }
         }
       p{
         .fontsize(12px);
@@ -907,7 +1024,7 @@ button:focus{
 .recharge-box{
   .text-section-con{
     font-weight: bold;
-    margin-top:30px;
+    margin-top:50px;
   }
   h3{
     font-weight: bold;
@@ -926,13 +1043,12 @@ button:focus{
   .left{
     display: inline-block;
     background: #f5f5f5;
-    padding: 6px 0px 7px;
+    padding: 7px 4px 7px;
     line-height: 1.42857143;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-weight: bold;
     .fontsize(13px);
-    margin-top:1px;
   }
 
   .form-list{
@@ -941,6 +1057,14 @@ button:focus{
   .btn{
     clear: both;
   }
+}
+.form-select-left{
+  .d_ib();
+  float: left;
+  padding:5px;
+  background: #f5f5f5;
+  border:1px solid #ccc;
+  .border-radius(4px);
 }
 /*购买结果*/
 .buyresult-box{
@@ -970,6 +1094,7 @@ button:focus{
     color:@color-main;
     font-weight: bold;
     span{
+      margin-left:10px;
       color:@color-fff;
       .border-radius(5px);
       background: @color-main;
@@ -988,6 +1113,21 @@ button:focus{
   .form-control {
     height: auto;
     padding: 3px 10px;
+  }
+  .green-bg{
+    background: #22ac38;
+    color:@color-fff;
+    padding:5px 15px;
+  }
+  .blue-bg{
+    color:@color-fff;
+    padding:5px 15px;
+    background: @color-main;
+  }
+  .panel-body{
+    p{
+      padding:5px 0;
+    }
   }
 }
 /*立即购买 加入购物车 按钮*/
@@ -1078,8 +1218,206 @@ button:focus{
   .well-bg-orange{
     background: #feb16d;
   }
+  .well-bg-blue{
+    background: #e9fce1;
+  }
+  .well-bg-orange2{
+    background: #f8edcf;
+    color:#fe610b
+  }
 }
-
+/*侧边栏*/
+.subnav-left{
+  height:100%;
+  padding-bottom:20px;
+  .subtitle{
+    padding:5px 0 0 0;
+    color:@color-little-word;
+    &:hover{
+      color:@color-main;
+    }
+  }
+  .title{
+      margin-top:10px;
+      color:#333;
+      .fontsize(16px);
+    padding: 10px 15px;
+    //&:hover{
+    //  background: @color-main;
+    //  color:@color-fff;
+    //}
+  }
+  .title.cur{
+    background: @color-main;
+    color:@color-fff;
+  }
+  .subtitle.cur{
+    color:@color-main;
+  }
+}
+.subnav-right{
+  border-left:1px solid @color-lines;
+  .hd{
+    .btn{
+      margin-left:20px;
+      padding:2px 20px;
+      .border-radius(15px);
+      color:@color-fff;
+    }
+  }
+}
+.subnav-con{
+  .oh();
+  .mar-tb{
+    margin:10px 0;
+  }
+  .top{
+      span{
+        padding:0 5px;
+        font-weight: bold;
+      }
+  }
+  .bottom{
+        .oh();
+  }
+  .table-th{
+      .fontsize(12px);
+      .table{
+        border-top:0;
+      }
+    th{
+      text-align: center;
+    }
+  }
+  .table-body{
+    .fontsize(12px);
+    .data-message{
+      padding:5px;
+    }
+    img{
+      width:50px;
+      height:60px;
+      border:1px solid @color-lines;
+    }
+    th{
+      line-height:60px;
+      text-align: center;
+    }
+    .name{
+      line-height: 20px;
+      padding-top:20px;
+    }
+    .table{
+      border:1px solid #dddddd;
+    }
+  }
+  .form{
+    input,.form-control{
+      font-weight: bold;
+    }
+    .form-control-static{
+      .fontsize(16px);
+      letter-spacing: 2px;
+    }
+  }
+  .btn{
+    width:120px;
+    background: #65bb64;
+    &:hover{
+      background: #347b33;
+    }
+  }
+  .table,th{
+    text-align: center;
+  }
+}
+.table-select{
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+  select{
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    width: auto;
+    padding-right:15px;
+    height: 100%;
+    background: url(../images/icon-down-up.png) no-repeat right top;
+    background-position:right 10px ;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+  }
+}
+.table-select2{
+  select{
+    background-position:right 5px ;
+    padding-right:0;
+  }
+}
+.vipcenter-bg{
+  background: @color-fff;
+  padding:10px 15px;
+}
+.linkForm-box{
+  width:100%;
+  .link-btn{
+    background: #d2d4d4;
+    border:1px solid @color-little-word;
+    font-weight: bold;
+    .border-radius(4px);
+    padding:6px 10px;
+    text-align: center;
+    &:hover{
+      background: #c4d6d6;
+    }
+  }
+  .form-group{
+    .oh();
+  }
+  .btn-zh{
+    background: #40cbc0;
+    .fontsize(14px);
+    color:@color-fff;
+    .border-radius(4px);
+    padding:4px 10px;
+    width:auto;
+  }
+  .code{
+    width:155px;
+    height:155px;
+    border:1px solid @color-lines;
+    padding:10px;
+  }
+  .control-label{
+    padding-top:10px;
+  }
+}
+.copy-result{
+    width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,.6);
+  .error{
+    position: fixed;
+    top:40%;
+    left: 50%;
+    margin-left:-150px;
+    width:300px;
+    height:150px;
+    background: @color-fff;
+    border:1px solid @color-little-word;
+    .fontsize(18px);
+    text-align: center;
+    padding-top:50px;
+    line-height:25px;
+  }
+  .error-btn{
+    padding:5px 20px ;margin:20px 5px 0 0; color:#fff;
+  }
+}
 .shadow-4{
   -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5);
   -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5);
@@ -1098,6 +1436,9 @@ button:focus{
 }
 .w-czk{
   width:100%;
+}
+.text-wrap{
+  .text-sl();
 }
 .jc{
   .db();
@@ -1137,7 +1478,6 @@ button:focus{
 .main-color{
   color:@color-main;
 }
-
 .red{
   color:@color-red;
 }
@@ -1151,25 +1491,44 @@ button:focus{
 .little-word{
   color:@color-little-word;
 }
-.item2,.item3{
+.item2,.item3,.item4,.item5,.item6,.item7,.item8,.item9,.item10,.item11,.item12,.item13,.item14,.item15,.item16,.item17,.item18,.item19,.item20,.item21{
   display: none;
 }
 .green-bg{
   background:#22ac38;
+  //&:hover{
+  //  background: #5c8624;
+  //  color:@color-fff;
+  //}
 }
 .red-bg{
   background:@color-red;
+  //&:hover{
+  //  background: #9a0923;
+  //  color:@color-fff;
+  //}
 }
 .orange-bg{
   background:@color-orange;
+  //&:hover{
+  //  background: #b74406;
+  //  color:@color-fff;
+  //}
 }
 .blue-bg{
   background: @color-main;
+  //&:hover{
+  //  background: @color-main-hover;
+  //  color:@color-fff;
+  //}
+
 }
 .checkbox-inline, .radio-inline{
   padding-left:0;
 }
-
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+  height:100%;
+}
 /*超小屏*/
 //@media screen and (max-device-width: 320px) {
 //  .formBox1 {

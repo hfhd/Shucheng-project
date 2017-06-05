@@ -147,8 +147,12 @@
       margin-left:0;
       font-weight: normal;
     }
-    input[type=checkbox]{
-
+    .search-label{
+      label{
+        span{
+          padding-left:0;
+        }
+      }
     }
   }
   /*书籍列表*/
@@ -329,8 +333,67 @@
       .fontsize(14px);
     }
   }
-
-
+  /*侧边栏*/
+  .menu-sub-icon{
+    width:20px;
+    height:20px;
+    background: url("../images/menu-sub.png") 0 0 no-repeat;
+    -webkit-background-s2ize:20px 20px;
+    background-size:20px 20px;
+    .fr();
+    margin:8px 10px 0 0;
+  }
+  .subnav-right{
+    border-left:0;
+  }
+  .subnav-left{
+    display: none;
+    background: rgba(0,0,0,.6);
+    width:40%;
+    margin-bottom:20px;
+    position: absolute;
+    top:41px;
+    right:0;
+    z-index: 999;
+    border:1px solid @color-lines;
+    .title,.subtitle{
+      color:@color-fff;
+    }
+  }
+  .subnav-con{
+    padding:10px 0;
+    border:1px solid #ddd;
+    background: none;
+    .top{
+      span{
+       width:100px;
+        .d_ib();
+      }
+    }
+    .table-body{
+      .body-tr{
+          background: @color-fff;
+      }
+      .data-message{
+        background: @color-fff;
+      }
+    }
+    .table-th{
+      table{
+        background: @color-fff;
+      };
+    }
+  }
+  .subnav-con-bg-fff{
+    background: @color-fff;
+  }
+  .linkForm-box{
+    padding:0 1px;
+    .fontsize(12px);
+    .link-btn{
+      margin-top:2px;
+    }
+  }
   .thumbnail{
     margin-bottom:10px;
     img{
@@ -341,6 +404,7 @@
   .marginlr-xs{
     margin:10px 2%;
   }
+
   .lg-header{
     .fontsize(16px);
   }

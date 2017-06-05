@@ -25,21 +25,21 @@ $(function () {
         $(".navToggle-con .item").eq($num).stop().show().siblings().stop().hide();
     })
 })
-//排序方式
-// $(function () {
-//     var selected = $('.selectToggle-title>option:selected');
-//     console.log("8888");
-//     selected.val(function(){
-//         $index = $(this).index();
-//         return true;
-//     })
-//     console.log($index);
-//     $(".selectToggle-con .item").eq($index).stop().show().siblings().stop().hide();
-//     $(".selectToggle-title").change(function(){
-//         $num = $(this).children('option:selected').index();
-//         $(".selectToggle-con .item").eq($num).stop().show().siblings().stop().hide();
-//     });
-// })
+/*查看更多*/
+$(function () {
+    $(".cp-intro .click-add").click(function () {
+        if( !$(".cp-intro .summary").is(":hidden")){
+            $(".cp-intro .detail").stop().slideDown();
+           $(".cp-intro .summary").stop().slideUp();
+            $(".cp-intro .click-add").html("简略查看");
+        }else {
+            $(".cp-intro .detail").stop().slideUp();
+            $(".cp-intro .summary").stop().slideDown();
+            $(".cp-intro .click-add").html("查看更多");
+        }
+    })
+})
+
 $(function () {
     /*超小屏*/
     if ((screen.width <=767) ) {
@@ -55,7 +55,11 @@ $(function () {
         })
         /*首页 新闻和消息页面高度*/
         $(".containerBox .fixheight").css("height","auto");
-        /*精品列表 申请按钮*/
+
+        /*会员中心 侧边栏*/
+        $(".menu-sub-icon").click(function () {
+            $(".slidenavBox .subnav-left").stop().toggle();
+        })
     }
     /*sm <800*/
     if ((screen.width <=991 && screen.width>=768 ) ) {
@@ -63,6 +67,24 @@ $(function () {
         $(".detail-main-box .spcs-show ").stop().hide();
     }
 })
+
+$(function () {
+    //侧边栏切换
+    for(var j = 0; j<$(".subnavToggle-title .type .list-l").length; j++){
+        $(".subnavToggle-title .type .list-l")[j].num=j;
+    }
+    $(".subnavToggle-title .type .list-l").click(function () {
+        // console.log(this.num);
+        $(this).addClass("cur").parents(".type").siblings().find(".list-l").removeClass("cur");
+        $(this).addClass("cur").siblings().removeClass("cur");
+        $(this).parents(".type").find(".title").addClass("cur");
+        $(this).parents(".type").siblings().find(".title").removeClass("cur");
+        $(".subnavToggle-con .item").eq(this.num).stop().show().siblings().hide();
+    })
+
+})
+
+
 //返回顶部
 $(function () {
     $(window).scroll(function () {
@@ -81,3 +103,7 @@ $(function () {
         );
     })
 })
+
+
+
+
