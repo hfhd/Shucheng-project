@@ -38,7 +38,7 @@ $(function () {
                 var returnStr = false;
                 $.ajax({
                     type: "POST",
-                    url:  "/js/form-login.json",
+                    url:  "/js/form-login.php",
                     async : false, //同步请求
                     data:{username:username},
                     dataType:"json",
@@ -157,7 +157,7 @@ $(function () {
                 var returnStr = false;
                 $.ajax({
                     type: "POST",
-                    url:  "/js/form-login.json",
+                    url:  "/js/form-login.php",
                     async : false, //同步请求
                     data:{passwordlogin:passwordlogin},
                     dataType:"json",
