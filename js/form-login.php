@@ -1,3 +1,4 @@
- {
- "state":"no"
- }
+<?php
+echo '{"state":"no"}';
+
+?>
