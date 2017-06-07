@@ -101,10 +101,6 @@
                 <h3 class="panel-title">重要通知</h3>
             </div>
             <ul class="list-group" id="zy-news-list">
-                <li class="list-group-item"><a href="#"><p class="news-con">免费域名注册</p><span>忽略</span></a> </li>
-                <li class="list-group-item"><a href="#"><p class="news-con">免费域名注册</p><span>忽略</span></a> </li>
-                <li class="list-group-item"><a href="#"><p class="news-con">免费域名注册</p><span>忽略</span></a> </li>
-                <li class="list-group-item"><a href="#"><p class="news-con">免费域名注册</p><span>忽略</span></a> </li>
             </ul>
         </div>
     </div>
@@ -159,8 +155,8 @@
     <div class="backToTop"></div>
 </div>
 <script>
-//消息通知 定时加载
- /*   $(document).ready(function () {
+    //消息通知 定时加载
+    $(document).ready(function () {
         setInterval("startRequest()",1000);
     });
     function startRequest(){
@@ -170,24 +166,24 @@
             async : false, //同步请求
             dataType:"json",
             success: function (data){
-                if (data.state==1) {
+                if (data.data!="") {   //判断data的object不为空
                     var html="";
 //                    var data = JSON.parse( data );
-                    console.log(data);
-//                    $(data.data).each(function(index,r){
-//                        html +='  <li class="list-group-item"><a href="'+r['url']+'"><p class="news-con">'+r['title']+'</p><span>忽略</span></a>  ';
-//                    });
-//                    for (var i=0; i<data.length; i++) {
-//                        html += ' <li class="list-group-item"><a href="'+data[i].url+'"><p class="news-con">'+data[i].title+'</p><span>忽略</span></a> </li>';
-//                    }
-                    $("#zy-news-list").append(html);
+                    $(data.data).each(function(index,r){
+                        html +=' <li class="list-group-item"><a href="'+r['url']+'"><p class="news-con">'+r['title']+'</p></a><span>忽略</span> </li> ';
+                    });
+                    /*通知*/
+                    $('.import-news').on('click','li span',function(){
+                        $(this).parents("li").stop().hide();
+                    });
+                    $("#zy-news-list").html(html);
                 }else{
-                    $(".newsBox ").stop().hide();
+                    $(".import-news").stop().hide();
                 };
             }
         })
     }
-    */
+    clearInterval(startRequest);
 </script>
 </body>
 </html>

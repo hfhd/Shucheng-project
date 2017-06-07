@@ -13,10 +13,6 @@ $(function () {
         $(".newsBox").removeClass("import-news-xs");
         $(".picList-box2 .pageBox").addClass("pull-right");
     };
-    /*通知*/
-    $(".import-news li span").click(function () {
-        $(this).parents("li").stop().hide();
-    })
 })
 $(function () {
     $(".navToggle-title .list-l").click(function () {
