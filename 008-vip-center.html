@@ -65,9 +65,9 @@
     </div>
 </div>
 
-<div class=" mainConBox ">
+<div class=" mainConBox " style="position: relative;">
     <div class="margin-header visible-xs"></div>
-    <div class="main-content-box margin-sm" style="position: relative;">
+    <div class="main-content-box margin-sm" >
         <div class="main-conten-top margin-bot">
             <h2 class="lg-header" style="font-weight: normal">会员中心</h2>
             <div class="menu-sub-icon visible-xs"></div>
@@ -240,7 +240,8 @@
                        </div>
                    </div>
                    <div class="item item2">
-                       <div class="vipcenter-bg margin-bot hd"><strong>我的佣金：<span class="orange">￥89.36</span><a href="#"> <button class="btn green-bg2">充值余额</button> </a><a href="#"> <button class="btn red-bg2">佣金提现</button> </a></strong></div>
+                       <div class="vipcenter-bg margin-bot hd hidden-xs"><strong><span>我的佣金：</span><span class="orange">￥89.36</span><a href="#" class="yj-btn " > <button class="btn green-bg2">充值余额</button> </a><a href="#" class="yj-btn "  > <button class="btn red-bg2">佣金提现</button> </a></strong></div>
+                       <div class="vipcenter-bg margin-bot hd visible-xs"><strong><span>我的佣金：</span><span class="orange">￥89.36</span><p class="yj-btn"><a href="#" class="fl " > <button class="btn green-bg2">充值余额</button> </a><a href="#" class=" fl"  > <button class="btn red-bg2 fl">佣金提现</button> </a></p></strong></div>
                        <div class="vipcenter-bg subnav-con subnav-con-bg-fff">
                            <div class="top"><span>全部充值</span><span>待充值</span><span>已完成</span></div>
                            <div class=" bottom margin-bot">
@@ -358,11 +359,11 @@
                        </div>
                    </div>
                    <div class="item item3">
-                       <div class="vipcenter-bg margin-bot hd"><strong>佣金提现</strong><a href="#"> <button class="btn green-bg2">充值余额</button> </a><a href="#"> <button class="btn red-bg2">佣金提现</button> </a></div>
+                       <div class="vipcenter-bg margin-bot hd"><strong>佣金提现</strong></div>
                        <div class="vipcenter-bg subnav-con subnav-con-bg-fff">
                            <div class="vipcenter-bg margin-bot gray-bg"></div>
                            <div class="form">
-                               <div class="formBox1">
+                               <div class="formBox1 width-col-xs ">
                                    <form class="form-horizontal" role="form" onsubmit="return checkSubmitmoney()" action="http://www.baidu.com" id="form4">
                                        <div class="form-group-box">
                                            <div class="form-group">
@@ -403,7 +404,7 @@
                                        <div class="form-group-box">
                                            <div class="form-group">
                                                <label class="col-sm-4 col-xs-4 control-label">提现方式:</label>
-                                               <div class="col-sm-7 col-xs-7 right-txt">
+                                               <div class="col-sm-7 col-xs-7">
                                                    <select class="form-control">
                                                        <option>提现到支付宝账号</option>
                                                        <option>提现到微信账号</option>
@@ -848,7 +849,7 @@
                        <div class="vipcenter-bg subnav-con subnav-con-bg-fff">
                            <div class="vipcenter-bg margin-bot gray-bg">基本信息</div>
                            <div class="form">
-                               <div class="formBox1">
+                               <div class="formBox1 width-col-xs">
                                    <form class="form-horizontal" role="form" onsubmit="return checkSubmitjb()" action="http://www.baidu.com" id="form1">
                                        <div class="form-group">
                                            <label class="col-sm-4 col-xs-4 control-label">用户名:</label>
@@ -911,10 +912,10 @@
                    </div>
                    <div class="item item9">
                        <div class="vipcenter-bg margin-bot hd"><strong>个人设置</strong></div>
-                       <div class="vipcenter-bg subnav-con subnav-con-bg-fff">
+                       <div class="vipcenter-bg subnav-con subnav-con-bg-fff" style="padding-bottom:100px;">
                            <div class="vipcenter-bg margin-bot gray-bg">修改密码</div>
                            <div class="form">
-                               <div class="formBox1">
+                               <div class="formBox1 width-col-xs">
                                    <form class="form-horizontal" role="form" onsubmit="return checkSubmitmm()" action="http://www.baidu.com" id="form2">
                                        <div class="form-group-box">
                                            <div class="form-group">
@@ -965,51 +966,51 @@
                    </div>
                    <div class="item item10">
                        <div class="vipcenter-bg margin-bot hd"><strong>个人设置</strong></div>
-                       <div class="vipcenter-bg subnav-con subnav-con-bg-fff">
+                       <div class="vipcenter-bg subnav-con subnav-con-bg-fff" style="padding-bottom: 80px;" >
                            <div class="vipcenter-bg margin-bot gray-bg">收货邮箱</div>
                            <div class="form">
-                               <div class="formBox1">
+                               <div class="formBox1 width-col-xs2">
                                    <form class="form-horizontal" role="form" onsubmit="return checkSubmitemail()" action="http://www.baidu.com" id="form3">
                                        <div class="form-group-box">
                                            <div class="form-group">
-                                               <label class="col-sm-4 col-xs-5 control-label">您的密码:</label>
-                                               <div class="col-sm-7 col-xs-6 ">
+                                               <label class="col-sm-4 col-xs-4 control-label">您的密码:</label>
+                                               <div class="col-sm-7 col-xs-7 ">
                                                    <input type="password" class="form-control" placeholder="" id="passwordlogin">
                                                </div>
                                            </div>
                                            <div class="form-warn" >
-                                               <p class="col-sm-4 col-xs-5 "></p>
-                                               <p class="help-block red col-sm-7 col-xs-6"></p>
+                                               <p class="col-sm-4 col-xs-4 "></p>
+                                               <p class="help-block red col-sm-7 col-xs-7"></p>
                                            </div>
                                         </div>
                                        <div class="form-group-box">
                                            <div class="form-group">
-                                               <label class="col-sm-4 col-xs-5 control-label">原收货邮箱:</label>
-                                               <div class="col-sm-7 col-xs-6 ">
+                                               <label class="col-sm-4 col-xs-4 control-label">原收货邮箱:</label>
+                                               <div class="col-sm-7 col-xs-7 ">
                                                    <p class="form-control-static">ffv0303@163.com</p>
                                                </div>
                                            </div>
                                            <div class="form-warn" >
-                                               <p class="col-sm-4 col-xs-5 "></p>
-                                               <p class="help-block red col-sm-7 col-xs-6"></p>
+                                               <p class="col-sm-4 col-xs-4 "></p>
+                                               <p class="help-block red col-sm-7 col-xs-7"></p>
                                            </div>
                                        </div>
                                        <div class="form-group-box">
                                            <div class="form-group">
-                                               <label class="col-sm-4 col-xs-5 control-label">新收货邮箱:</label>
-                                               <div class="col-sm-7 col-xs-6 ">
+                                               <label class="col-sm-4 col-xs-4 control-label">新收货邮箱:</label>
+                                               <div class="col-sm-7 col-xs-7 ">
                                                    <input type="text" class="form-control" placeholder="" id="email">
                                                </div>
                                            </div>
                                            <div class="form-warn" >
-                                               <p class="col-sm-4 col-xs-5 "></p>
-                                               <p class="help-block red col-sm-7 col-xs-6"></p>
+                                               <p class="col-sm-4 col-xs-4 "></p>
+                                               <p class="help-block red col-sm-7 col-xs-7"></p>
                                            </div>
                                        </div>
                                        <div class="form-group-box">
                                            <div class="form-group">
-                                               <label class="col-sm-4 col-xs-5 control-label"></label>
-                                               <div class=" col-sm-7 col-xs-6">
+                                               <label class="col-sm-4 col-xs-4 control-label"></label>
+                                               <div class=" col-sm-7 col-xs-7">
                                                    <button type="submit" class="btn btn-default" id="submit">提交</button>
                                                </div>
                                            </div>

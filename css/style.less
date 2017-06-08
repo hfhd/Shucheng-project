@@ -83,11 +83,15 @@ button:focus{
 //引导页
 .yingdaobody{
   background: url("../images/yingdao-bg.jpg") fixed center center no-repeat;
-  background-size: cover;
-  width: 98%;
+  background-size:cover;
+  width: 100%;
   height: 100%;
-  .login-btn{
-      .db();
+  position: relative;
+}
+.yd-bg{position:relative;margin:0 auto;overflow:hidden;z-index:1;height: 100%;width:100%;}
+.homepage_bg{width:100%;height:auto;display:block; z-index:1;}
+  .yingdao-login-btn{
+    .db();
     position: fixed;
     top: 45%;
     left: 50%;
@@ -111,7 +115,7 @@ button:focus{
       }
     }
   }
-}
+
 /*登录页*/
 .mainConBox{
   width:100%;
@@ -144,6 +148,12 @@ button:focus{
   width: 50%;
   margin: 25px auto;
   .fontsize(1em);
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:5px;
+    margin-right:5px;
+  }
   .form-group-box{
     margin-bottom:10px;
     .oh();
@@ -195,18 +205,21 @@ button:focus{
       margin-top: 15px;
       margin-left: 10px;
     }
+
     .right-txt{
-      padding-top:10px;
+      padding-top:16px;
       span{
         padding:0 20px 0 10px;
-        .fontsize(16px);
+        .fontsize(18px);
       }
     }
     .yzmpic{
       width:100px;
       height:44px;
+      margin-top:4px;
     }
   }
+
   .btn{
     width:100%;
     .fontsize(1.1em);
@@ -236,6 +249,34 @@ button:focus{
     padding-top:11px;
     font-weight: bold;
     .fontsize(14px);
+  }
+}
+.login-form{
+ .form-group {
+   .form-control {
+     line-height: 32px;
+     .fontsize(18px);
+
+   }
+   label{
+     padding-top:14px;
+     .fontsize(18px);
+     text-align: right;
+   }
+   .tx-icon{
+     margin-top:21px;
+   }
+   }
+  .yzm-form{
+    .col-md-2, .col-sm-3, .col-xs-4 {
+      margin-right:1px;
+    }
+  }
+  .wjmm{
+    .fl();
+  }
+  .btn-lg{
+    .fontsize(18px);
   }
 }
 .formBox2{
@@ -339,13 +380,12 @@ button:focus{
       span{
         .fl();
         padding-left:2px;
-        //margin-top:2px;
+        padding-top:2px;
       }
       input{
         .fl();
       }
       .english-top{
-        //margin-top:2px;
       }
     }
   }
@@ -682,6 +722,9 @@ button:focus{
       height:220px;
     }
   }
+  .border{
+    border:1px solid @color-lines;
+  }
   .pic-thum-fixed{
     width:160px;
     margin:10px auto;
@@ -698,7 +741,7 @@ button:focus{
     .oh();
     span{
       .fontsize(12px);
-      padding:11px 10px;
+      padding:11px 0;
     }
     .fl-w{
       //width:20%;
@@ -835,6 +878,8 @@ button:focus{
   h3{
     padding:10px 0;
     font-weight: bold;
+    color:#989797;
+
   }
   p{
     line-height: 20px;
@@ -1083,14 +1128,24 @@ button:focus{
   width:80%;
   background: #e9fce1;
   border:1px solid #097c25;
-  .border-radius(2px);
+  .border-radius(6px);
   margin:80px auto 0;
-  padding:40px 10px;
+  padding:15% 10px;
   text-align: center;
+  h3,h4{
+    margin-bottom:30px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+  p{
+    font-weight: bold;
+    line-height: 25px;
+    .fontsize(18px);
+  }
   .btn{
     margin:20px auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding:10px 50px;
+    .fontsize(16px);
   }
 }
 
@@ -1142,6 +1197,14 @@ button:focus{
     }
   }
 }
+.service-panel{
+  .panel-heading{
+    line-height:20px;
+  }
+}
+.service-btn{
+  line-height:26px;
+}
 /*立即购买 加入购物车 按钮*/
 .buy-button-inline{
   margin-top:20px;
@@ -1152,7 +1215,6 @@ button:focus{
 }
 .buy-button-inline2{
   .btn{
-    .border-radius(0);
     padding:6px 20px;
     color:@color-fff;
     .fontsize(15px);
@@ -1186,6 +1248,8 @@ button:focus{
   text-align: center;
   .btn{
     font-weight: bold;
+    display: block;
+    width:100%;
   }
   em{
     width:30px;
@@ -1256,10 +1320,6 @@ button:focus{
       .fontsize(16px);
     padding: 10px 15px;
     cursor: pointer;
-    //&:hover{
-    //  background: @color-main;
-    //  color:@color-fff;
-    //}
   }
   .title.cur{
     background: @color-main;
@@ -1280,6 +1340,7 @@ button:focus{
       color:@color-fff;
     }
   }
+
 }
 .subnav-con{
   .oh();
@@ -1345,6 +1406,9 @@ button:focus{
   .table,th{
     text-align: center;
   }
+  .formBox1{
+    margin:55px auto 30px;
+  }
 }
 .table-select{
   position: relative;
@@ -1373,6 +1437,7 @@ button:focus{
 .vipcenter-bg{
   background: @color-fff;
   padding:10px 15px;
+  .oh();
 }
 .linkForm-box{
   width:100%;
@@ -1416,12 +1481,13 @@ button:focus{
   left:0;
   background: rgba(0,0,0,.6);
   .error{
+    .oh();
     position: fixed;
     top:40%;
     left: 50%;
     margin-left:-150px;
     width:300px;
-    height:150px;
+    height:auto;
     background: @color-fff;
     border:1px solid @color-little-word;
     .fontsize(18px);
@@ -1430,7 +1496,7 @@ button:focus{
     line-height:25px;
   }
   .error-btn{
-    padding:5px 20px ;margin:20px 5px 0 0; color:#fff;
+    padding:5px 20px ;margin:20px 5px ; color:#fff;
   }
 }
 .shadow-4{
@@ -1454,6 +1520,9 @@ button:focus{
 }
 .text-wrap{
   .text-sl();
+}
+.border{
+  border:1px solid @color-lines;
 }
 .jc{
   .db();
