@@ -30,7 +30,7 @@
         <div class="form-group-txt">
             <label  class="col-md-3 col-sm-3 col-xs-4 control-label"></label>
             <div class="col-md-4 col-sm-6  col-xs-7 no-padding-r">
-                <a href="#" class="pull-right ">注册新账号</a>
+                <a href="#" class="pull-right " style="font-size: 14px;">注册新账号</a>
             </div>
         </div>
         <form action="http://www.baidu.com" class="form-horizontal " role="form" onsubmit="return checkSubmit()">
@@ -39,7 +39,7 @@
                     <label  class="col-md-3 col-sm-3  col-xs-4 control-label">登录账号:</label>
                     <div class="col-md-4 col-sm-6  col-xs-7 ">
                         <input type="text" class="form-control"
-                               placeholder="邮箱/登录名" id="usernamelogin">
+                               placeholder="邮箱/用户名" id="usernamelogin">
                     </div>
                     <p class="col-md-5 tx-icon col-sm-3 col-xs-1 "></p>
                 </div>
@@ -68,8 +68,8 @@
                 <div class="col-md-3 col-sm-5 col-xs-8 ">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox"><span>自动登录</span>
-                            <span class="red">请勿在公用电脑上启用</span>
+                            <input type="checkbox"  name="zddl"><span>自动登录</span>
+                            <span class="no-strat">请勿在公用电脑上启用</span>
                         </label>
                     </div>
                 </div>
@@ -79,8 +79,8 @@
             </div>
             <div class="form-group-box">
                 <div class="form-group">
-                    <label  class="col-md-3 col-sm-3   col-xs-3 control-label"></label>
-                    <div class=" col-md-4 col-sm-6   col-xs-8">
+                    <label  class="col-md-3 col-sm-3   col-xs-4 control-label"></label>
+                    <div class=" col-md-4 col-sm-6   col-xs-7">
                         <button type="submit" class="btn btn-default btn-lg" id="submit-login">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
                     </div>
                 </div>
@@ -125,6 +125,18 @@
     function hideError() {
         $("#error").stop().hide();
     }
+
+    //自动登录,点击，出红色字体
+    $('input[name="zddl"]').change(function(){
+        if($('input[name="zddl"]').is(':checked')){
+            $(this).prop("checked",true);
+            $(this).siblings(".no-strat").addClass("red");
+        }else{
+            $(this).removeAttr("checked",false);
+            $(this).siblings(".no-strat").removeClass("red");
+        }
+    });
+
 </script>
 
 </body>

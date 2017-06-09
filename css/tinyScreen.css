@@ -190,7 +190,7 @@ button:focus {
 }
 .formBox1 .form-group .form-control {
   height: auto;
-  padding: 10px 5px;
+  padding: 10px 10px;
   border-radius: 1px;
   letter-spacing: 2px;
 }
@@ -199,19 +199,23 @@ button:focus {
 }
 .formBox1 .form-group ::-webkit-input-placeholder {
   /* WebKit browsers */
-  font-size: 12px;
+  font-size: 14px;
+  color: #9d9d9e;
 }
 .formBox1 .form-group  :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  font-size: 12px;
+  font-size: 14px;
+  color: #9d9d9e;
 }
 .formBox1 .form-group ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  font-size: 12px;
+  font-size: 14px;
+  color: #9d9d9e;
 }
 .formBox1 .form-group :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  font-size: 12px;
+  font-size: 14px;
+  color: #9d9d9e;
 }
 .formBox1 .form-group .tx-icon {
   width: 6px;
@@ -344,7 +348,6 @@ button:focus {
   width: 100%;
   height: 45px;
   font-size: 16px;
-  letter-spacing: 2px;
 }
 .searchBox .btn-green {
   background: #86b942;
@@ -389,6 +392,7 @@ button:focus {
   float: left;
   padding-left: 2px;
   padding-top: 2px;
+  margin-top: 1px;
 }
 .hot-search .search-label label input {
   float: left;
@@ -807,6 +811,9 @@ button:focus {
   color: #fff;
   font-size: 16px;
 }
+.pl-list-box .list-group .btn-default {
+  background: #9d9d9e;
+}
 .cp-intro .panel-heading {
   font-weight: bold;
 }
@@ -1038,6 +1045,9 @@ button:focus {
 .recharge-box-con .w-czk {
   font-size: 18px;
 }
+.recharge-box-con .input-file {
+  font-size: 14px;
+}
 .recharge-box .text-section-con {
   font-weight: bold;
   margin-top: 50px;
@@ -1105,6 +1115,9 @@ button:focus {
   margin: 20px auto;
   padding: 10px 50px;
   font-size: 16px;
+}
+.buyresult-box .dd {
+  padding: 5px 0;
 }
 /*底部*/
 .footerBox {
@@ -1425,6 +1438,7 @@ button:focus {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   background: rgba(0, 0, 0, 0.6);
 }
 .copy-result .error {
@@ -2115,6 +2129,10 @@ button:focus {
     padding-left: 0;
     padding-right: 0;
   }
+  .col-padding-no .subnav-right .help-block,
+  .recharge-box .subnav-right .help-block {
+    padding-left: 6px;
+  }
   .detail-main-box .col-lg-1,
   .detail-main-box .col-lg-10,
   .detail-main-box .col-lg-11,
@@ -2174,6 +2192,10 @@ button:focus {
   }
   .width-col-xs2 .col-xs-4 {
     width: 28%;
+  }
+  /*购买结果*/
+  .buyresult-box .displayb {
+    display: block;
   }
 }
 /*超小屏*/

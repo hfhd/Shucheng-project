@@ -177,7 +177,7 @@ button:focus{
     }
     .form-control {
       height: auto;
-      padding: 10px 5px;
+      padding: 10px 10px;
       .border-radius(1px);
       //.fontsize(16px);
       letter-spacing: 2px;
@@ -186,16 +186,20 @@ button:focus{
       }
     }
     　::-webkit-input-placeholder { /* WebKit browsers */
-          font-size:12px;
+          font-size:14px;
+        color:#9d9d9e;
       }
     　 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            font-size:12px;
+            font-size:14px;
+      color:#9d9d9e;
       }
     　::-moz-placeholder { /* Mozilla Firefox 19+ */
-          font-size:12px;
+          font-size:14px;
+      color:#9d9d9e;
       }
       :-ms-input-placeholder { /* Internet Explorer 10+ */
-          font-size:12px;
+          font-size:14px;
+        color:#9d9d9e;
       }
     .tx-icon {
       width: 6px;
@@ -338,7 +342,7 @@ button:focus{
       width:100%;
       height:45px;
       .fontsize(16px);
-      letter-spacing: 2px;
+      //letter-spacing: 2px;
     }
   }
   .btn-green{
@@ -381,6 +385,7 @@ button:focus{
         .fl();
         padding-left:2px;
         padding-top:2px;
+        margin-top:1px;
       }
       input{
         .fl();
@@ -825,6 +830,9 @@ button:focus{
       color:@color-fff;
       .fontsize(16px);
     }
+    .btn-default{
+      background: @color-little-word;
+    }
   }
 }
 .cp-intro{
@@ -1078,6 +1086,9 @@ button:focus{
   .w-czk{
     .fontsize(18px);
   }
+  .input-file{
+    font-size:14px;
+  }
 }
 .recharge-box{
   .text-section-con{
@@ -1147,6 +1158,9 @@ button:focus{
     margin:20px auto;
     padding:10px 50px;
     .fontsize(16px);
+  }
+  .dd{
+    padding:5px 0;
   }
 }
 
@@ -1486,6 +1500,7 @@ button:focus{
   position: fixed;
   top:0;
   left:0;
+  z-index: 9999;
   background: rgba(0,0,0,.6);
   .error{
     .oh();
