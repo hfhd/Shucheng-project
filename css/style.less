@@ -1328,12 +1328,16 @@ button:focus{
   height:100%;
   padding-bottom:20px;
   .subtitle{
-    padding:8px 0;
     color:@color-little-word;
     &:hover{
       color:@color-main;
     }
     cursor: pointer;
+    a{
+      .db();
+      padding: 8px 0;
+      color:@color-little-word;
+    }
   }
   .title{
       margin-top:10px;
@@ -1347,7 +1351,9 @@ button:focus{
     color:@color-fff;
   }
   .subtitle.cur{
-    color:@color-main;
+    a{
+      color:@color-main;
+    }
   }
 }
 .subnav-right{
@@ -1363,6 +1369,12 @@ button:focus{
   }
 
 }
+.sub-right-toggle-con{
+  .oh();
+  .margin-bot{
+    margin-bottom:40px;
+  }
+}
 .subnav-con{
   .oh();
   .mar-tb{
@@ -1373,6 +1385,15 @@ button:focus{
         padding:0 5px;
         font-weight: bold;
       }
+    .list-l.cur{
+        background: @color-main;
+      color:@color-fff;
+    }
+    .list-l:hover{
+      color:@color-fff;
+      background: #a4d3ec;
+      cursor: pointer;
+    }
   }
   .bottom{
         .oh();
@@ -1475,6 +1496,8 @@ button:focus{
   }
   .form-group{
     .oh();
+    margin-left: 5px;
+    margin-right:5px;
   }
   .btn-zh{
     background: #40cbc0;
