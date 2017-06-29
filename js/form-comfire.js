@@ -59,7 +59,7 @@ $(function () {
         }
         //验证邮箱
         if($(this).is("#email")){
-            if($.trim(this.value) == "" || ($.trim(this.value) != "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test($.trim(this.value)))){
+            if($.trim(this.value) == ""){
                 var errorMsg = "请输入正确的E-Mail地址！";
                 $helpmessbox.stop().show();
                 $helpmess.html(errorMsg);
@@ -72,7 +72,7 @@ $(function () {
         //验证密码
         if($(this).is("#password")){
             //运用jQuery中的$.trim()方法，去掉首位空格
-            if($.trim(this.value) == "" || $.trim(this.value).length < 6 ||  $.trim(this.value).length > 20){
+            if($.trim(this.value) == ""){
                 var errorMsg = " 请输入6到20位由大小写英文、数字或符号组成的字符！";
                 $helpmessbox.stop().show();
                 $helpmess.html(errorMsg);
@@ -96,10 +96,8 @@ $(function () {
         }
         //确认密码
         if($(this).is("#passwordcomfire")){
-            var pas=document.getElementById("password").value;
-            var repas=document.getElementById("passwordcomfire").value;
-            if(pas != "" && pas!=repas ){
-                var errorMsg = "两次输入的密码不一致！";
+            if($.trim(this.value) == ""){
+                var errorMsg = "确认密码不能为空！";
                 $helpmessbox.stop().show();
                 $helpmess.html(errorMsg);
             }
@@ -217,14 +215,35 @@ $(function () {
 
 });
 function checkSubmitRegis(){
-    if( okMsg1 && okMsg2 && okMsg3 && okMsg4 && okMsg5 && okMsg6 && okMsg7 ) {
-        return true;
+        // return true;
+        var username = $("#username").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var passwordcomfire = $("#passwordcomfire").val();
+        var qq = $("#qq").val();
+        var weixin = $("#weixin").val();
+        var yqm = $("#yqm").val();
+        var yzm = $("#yzm").val();
+        var returnStr = false;
+        $.ajax({
+            type: "POST",
+            url:  "/js/checkUserInfo.php",
+            async : false, //同步请求
+            data:{username:username,email:email,password:password,passwordcomfire:passwordcomfire,qq:qq,weixin:weixin,yqm:yqm,yzm:yzm},
+            dataType:"json",
+            success: function(data) {
+                if (data.status == "no") {
+                    $("#error").stop().show();
+                    $("#result-mess").html(data.msg);
+//                    alert(data.msg);
+                } else if(data.status == 'ok'){
+                    returnStr = true;
+                    // okMsg7 = true;
+                }
+            }
+        });
+        return returnStr;
         // alert("输入正确")
-    }else{
-        $('#error').stop().show();
-        return false;
-    }
-    // alert("注册成功，密码已发到你的邮箱");
 }
 function checkSubmitjb() {
     if( okMsg5 && okMsg8 ) {

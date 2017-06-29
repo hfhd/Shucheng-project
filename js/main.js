@@ -92,7 +92,6 @@ $(function () {
         $(this).parents(".type").siblings().find(".title").removeClass("cur");
         $(".subnavToggle-con .item").eq(this.num).stop().show().siblings().hide();
     })
-
 })
 
 
